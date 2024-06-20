@@ -1,0 +1,337 @@
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+
+    z-index: 1000;
+}
+
+
+
+.listHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 100%;
+}
+
+.iconResponsive {
+    display: none;
+}
+
+.listHeader>div {
+    cursor: pointer;
+    margin-left: 5%;
+    font-size: 18px;
+
+}
+
+.listHeader>div a {
+    color: black;
+    position: relative;
+    text-decoration: none;
+}
+
+/* .listHeader>div a::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    z-index: -1;
+    background-color: var(--secondColor);
+
+    opacity: 0;
+    transition: all .5s;
+} */
+
+/* .listHeader>div a:hover::before {
+    opacity: 1;
+    padding: 5px;
+    top: -8px;
+    width: 105%;
+    border-radius: 7px;
+} */
+
+.active a {
+    position: absolute;
+    display: inline-block;
+
+    height: 25px;
+
+    z-index: -1;
+
+    padding: 5px;
+    width: 105%;
+    border-radius: 7px;
+
+    color: var(--subText);
+
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+
+    background-color: var(--mainColor);
+
+    color: var(--mainColor);
+
+    animation: rightActive 1s forwards;
+}
+
+@keyframes rightActive {
+    to {
+        width: 100%;
+    }
+}
+
+.active a span {
+    animation: colorChange 1s forwards;
+
+}
+
+.active a span:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.active a span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.active a span:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.active a span:nth-child(4) {
+    animation-delay: .4s;
+}
+
+.active a span:nth-child(5) {
+    animation-delay: .5s;
+}
+
+.active a span:nth-child(6) {
+    animation-delay: .6s;
+}
+
+.active a span:nth-child(7) {
+    animation-delay: .7s;
+}
+
+.active a span:nth-child(8) {
+    animation-delay: .8s;
+}
+
+@keyframes colorChange {
+    100% {
+        color: var(--mainColor);
+    }
+}
+
+
+
+.listHeader:hover>div a {
+    transition: all 1s;
+}
+
+.listHeader>div a:hover span:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.listHeader>div a:hover span:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.listHeader>div a:hover span:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.listHeader>div a:hover span:nth-child(4) {
+    transition-delay: .4s;
+}
+
+.listHeader>div a:hover span:nth-child(5) {
+    transition-delay: .5s;
+}
+
+.listHeader>div a:hover span:nth-child(6) {
+    transition-delay: .6s;
+}
+
+.listHeader>div a:hover span:nth-child(7) {
+    transition-delay: .7s;
+}
+
+.listHeader>div a:hover span:nth-child(8) {
+    transition-delay: .8s;
+}
+
+.listHeader>div a:hover {
+    color: var(--mainColor);
+}
+
+
+
+
+
+@media (max-width:1000px) {
+    .header {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .listHeader {
+        flex-direction: column;
+        width: 0;
+
+        display: none;
+        z-index: 10;
+
+        background-color: rgb(168, 134, 228, .1);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+
+        position: absolute;
+
+        top: 80px;
+        left: 0px;
+        padding-bottom: 40px;
+
+        opacity: 0;
+
+        height: auto;
+    }
+
+    .iconResponsive:hover+.listHeader,
+    .listHeader:hover {
+        display: inline-block;
+        animation: show .3s forwards;
+    }
+
+    @keyframes show {
+        to {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
+
+    .iconResponsive {
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+
+        display: inline-block;
+
+        padding: 24px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 36 36'%3E%3Cpath fill='black' d='M32 29H4a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2' class='clr-i-outline clr-i-outline-path-1'/%3E%3Cpath fill='black' d='M32 19H4a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2' class='clr-i-outline clr-i-outline-path-2'/%3E%3Cpath fill='black' d='M32 9H4a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2' class='clr-i-outline clr-i-outline-path-3'/%3E%3Cpath fill='none' d='M0 0h36v36H0z'/%3E%3C/svg%3E");
+
+        background-size: cover;
+
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .listHeader>div {
+        text-align: center;
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 0;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+
+
+    .iconResponsive:hover+.listHeader>div:nth-child(1),
+    .iconResponsive:hover+.listHeader>div:nth-child(3),
+    .iconResponsive:hover+.listHeader>div:nth-child(5) {
+        opacity: 0;
+        transform: translateX(-200px);
+        animation: list 1s forwards;
+    }
+
+    .iconResponsive:hover+.listHeader>div:nth-child(2),
+    .iconResponsive:hover+.listHeader>div:nth-child(4) {
+        opacity: 0;
+        transform: translateX(200px);
+        animation: list 1s forwards;
+    }
+
+    .iconResponsive:hover+.listHeader>div:nth-child(2) {
+        animation-delay: .1s;
+    }
+
+    .iconResponsive:hover+.listHeader>div:nth-child(3) {
+        animation-delay: .2s;
+    }
+
+    .iconResponsive:hover+.listHeader>div:nth-child(4) {
+        animation-delay: .3s;
+    }
+
+    .iconResponsive:hover+.listHeader>div:nth-child(5) {
+        animation-delay: .4s;
+    }
+
+    @keyframes list {
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    .active a {
+        width: 100%;
+    }
+
+
+}
+
+
+@media (max-width:600px) {
+
+    .iconResponsive:hover+.listHeader>div,
+    .listHeader:hover>div {
+        font-size: 2.6vw;
+    }
+
+    .listHeader>div div::before {
+        width: 15px;
+        height: 15px;
+        top: 0px;
+        left: -3px;
+    }
+}
+
+@media (max-width:555px) {
+
+    .iconResponsive {
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+}

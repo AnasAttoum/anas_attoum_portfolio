@@ -1,0 +1,65 @@
+.cardSkill{
+    width: 12vw;
+    height: 12vw;
+    margin-bottom: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.307);
+
+    border-radius: 50%;
+    transition: all .5s;
+
+    position: relative;
+    opacity: 0;
+}
+
+
+.cardSkill div{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 70%;
+
+    transition: all .5s;
+}
+
+
+.cardSkill:hover{
+    border-radius: 0;
+}
+
+.cardSkill:hover div{
+    transform: scale(.8) translateY(-60%);
+}
+
+.cardSkill span{
+    position: absolute;
+    top: 20%;
+
+    font-size: 1.8vw;
+    
+    opacity: 0;
+    
+    transform: scale(.6);
+    transition: all .5s;
+}
+.cardSkill:hover span{
+    opacity: 1;
+    transform: scale(1);
+    top: 70%;
+}
+
+
+
+@media (max-width:555px) {
+    .cardSkill{
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 10%;
+    }
+
+}

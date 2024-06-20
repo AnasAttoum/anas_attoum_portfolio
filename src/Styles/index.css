@@ -1,0 +1,125 @@
+:root {
+    --mainColor: rgb(168, 134, 228);
+    --mainColorOpacity: rgb(168, 134, 228, .3);
+    /* --mainColor: #aaa; */
+    /* --mainColor: rgb(240, 87, 99, .75); */
+    /* --mainColor: rgb(89, 178, 86, .75); */
+    /* --mainColor: rgba(98, 86, 178, 0.75); */
+
+    --secondColor: #DCCFF4;
+    /* --secondColor:rgba(229, 144, 151, 0.75); */
+    /* --secondColor: rgba(128, 183, 126, 0.75); */
+    /* --secondColor: rgba(138, 131, 182, 0.75); */
+    --subText: #A3A3A3;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(168, 134, 228, .1);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+
+/*                                              Animations                                           */
+.toRightAnimation{
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: toRightAnimation .5s linear 1s forwards;
+}
+@keyframes toRightAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.toTopAnimation{
+    opacity: 0;
+    transform: translateY(50px);
+    animation: toTopAnimation .5s linear 1.5s forwards;
+}
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+.toLeftAnimation{
+    opacity: 0;
+    transform: translateX(100px);
+    animation: toLeftAnimation .5s linear 2s forwards;
+}
+@keyframes toLeftAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.opacityAnimation{
+    opacity: 0;
+    animation: opacityAnimation .5s linear 2.5s forwards;
+}
+@keyframes opacityAnimation {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.letterSpacingAnimation{
+    opacity: 0;
+    letter-spacing: 20px;
+    animation: letterSpacingAnimation .5s linear forwards;
+}
+@keyframes letterSpacingAnimation {
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
+}
+
+
+
+/* Animation For Skills */
+.scaleAnimation>div{
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleAnimation .5s linear forwards;
+}
+@keyframes scaleAnimation {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.moveProjectsAnimation>div:nth-child(odd){
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+.moveProjectsAnimation>div:nth-child(even){
+    opacity: 0;
+    transform: translateY(100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
