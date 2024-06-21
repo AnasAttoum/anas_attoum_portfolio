@@ -19,7 +19,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(168, 134, 228, .1);
+    background-color: rgb(168, 134, 228, .05);
     box-sizing: border-box;
     overflow-x: hidden;
     user-select: none;

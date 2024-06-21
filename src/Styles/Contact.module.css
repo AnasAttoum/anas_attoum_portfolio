@@ -253,8 +253,8 @@ input:focus {
 .icons>.link>div {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
+    width: 75%;
+    height: 75%;
 }
 
 .icons .link:nth-child(1) div {
@@ -385,6 +385,28 @@ input:focus {
 
 }
 
+@media(max-width:550px){
+    .containerContact .rightContact h3 {
+        font-size: 4.5vw;
+    }
+
+    .containerContact .rightContact h6 {
+        font-size: 3.5vw;
+    }
+
+    .containerContact .rightContact p {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width:425px){
+    .icons>.link {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+}
+
 
 @media (max-width:350px) {
 
@@ -412,11 +434,6 @@ input:focus {
         width: 20px;
         height: 20px;
         margin: 10px;
-    }
-
-    .icons>.link>div {
-        width: 10px;
-        height: 10px;
     }
 
 }

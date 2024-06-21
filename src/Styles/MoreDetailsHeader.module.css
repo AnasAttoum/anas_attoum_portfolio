@@ -120,9 +120,6 @@
     .back {
         left: 20px;
     }
-}
-
-@media (max-width:570px) {
     .title {
         font-size: 3vw;
         position: relative;
@@ -138,10 +135,17 @@
     }
 }
 
+@media (max-width:570px) {
+
+}
+
 @media (max-width:555px) {
     .back {
         top: 100px;
         left: 40px;
+    }
+    .title {
+        font-size: 4vw;
     }
 }
 
@@ -151,21 +155,24 @@
     }
     .buttons {
         flex-direction: column;
+        justify-content: space-evenly;
         width: 20%;
         position: relative;
         right: 10px;
+        height: 100%;
+    }
+
+    .buttons>div>a {
+        font-size: 3vw;
     }
 }
 
 @media (max-width:340px) {
     .title {
-        font-size: 3.5vw;
         position: relative;
         left: 10px;
     }
-    .buttons>div>a {
-        font-size: 2.5vw;
-    }
+    
     .back {
         width: 25px;
         height: 25px;

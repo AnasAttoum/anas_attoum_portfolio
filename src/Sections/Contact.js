@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser'
 
 import styles from '../Styles/Contact.module.css';
 
@@ -18,6 +19,16 @@ export default function Contact() {
         }
     }, [section_IsInView, title_IsInView, titleEntry])
 
+
+    const sendEmail = (e)=>{
+        e.preventDefault();
+        emailjs.sendForm('service_o1gv52m', 'template_1fs9jbt', e.target, 'ohOS6QlC-qLfiY2AG')
+        
+        e.target.childNodes.forEach(element => {
+            element.value=''
+        });
+    }
+
     return (
         <section id="contact" className={styles.contact} ref={section}>
             <div className={styles.titleContact} ref={title}>Contact Me</div>
@@ -25,7 +36,7 @@ export default function Contact() {
             <div className={styles.containerContact}>
 
                 <div className={styles.leftContact}>
-                    <form>
+                    <form onSubmit={sendEmail}>
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" name="name" />
 
