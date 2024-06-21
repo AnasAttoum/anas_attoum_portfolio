@@ -61,8 +61,7 @@ export default function Contact() {
                         <div className={styles.backdrop}>
                             <h3>Let’s Connect!<br />
                                 and make something amazing together</h3>
-                            <h6>I’m currently looking for new opportunities, my inbox is always open. Whether you have a question or just
-                                want to say hi, I’ll try my best to get back to you!
+                            <h6>I’m currently looking for new opportunities, whether it’s a part-time of full-time position, my inbox is always open.<br/> Drop me a message!
                             </h6>
                             <div className={styles.icons}>
                                 <Link to={'https://github.com/AnasAttoum'} target="_blank" className={styles.link}><div></div></Link>
