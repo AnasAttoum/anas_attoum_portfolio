@@ -26,16 +26,19 @@ export default function Skills() {
     ])
 
     return (
-        <section id="skills" className={styles.skills} ref={section}>
-            <div className={styles.titleSkills} ref={title}>What I Love</div>
+        <>
+            <span id="skills" style={{ paddingTop: '70px' }}></span>
+            <section className={styles.skills} ref={section}>
+                <div className={styles.titleSkills} ref={title}>What I Love</div>
 
-            <div className={styles.containerSkills} ref={cardSkill}>
+                <div className={styles.containerSkills} ref={cardSkill}>
 
-                {skillsData.map((skill, index) => {
-                    return <CardSkill key={index} color={skill.color} text={skill.text} backgroundImage={skill.backgroundImage} animationDelay={skill.animationDelay}/>
-                })}
+                    {skillsData.map((skill, index) => {
+                        return <CardSkill key={index} color={skill.color} text={skill.text} backgroundImage={skill.backgroundImage} animationDelay={skill.animationDelay} />
+                    })}
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </>
     );
 }

@@ -19,13 +19,14 @@
 }
 
 
-
+@media (max-width:1225px) {
+    .projects{
+        padding-top:0px;
+    }
+}
 
 
 @media (max-width:800px) {
-    .projects{
-        padding-top: 0px;
-    }
 
     .titleProjects {
         font-size: 40px;

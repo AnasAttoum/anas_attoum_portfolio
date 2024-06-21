@@ -99,7 +99,7 @@
     }
 
     .picAbout {
-        width: 95%;
+        width: 100%;
     }
 
     .picAbout div {
@@ -127,8 +127,9 @@
         width: 100%;
     }
 
-    .pic2 {
-        padding-top: 0px;
+    .picAbout div {
+        width: 65vw;
+        height: 65vw;
     }
 
 }

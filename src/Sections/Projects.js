@@ -28,18 +28,21 @@ export default function Projects() {
 
 
     return (
-        <section id="projects" className={styles.projects} ref={section}>
-            <div className={styles.titleProjects} ref={title}>What I Did</div>
+        <>
+            <span id="projects" style={{ paddingTop: '100px' }}></span>
+            <section className={styles.projects} ref={section}>
+                <div className={styles.titleProjects} ref={title}>What I Did</div>
 
-            <div className={styles.containerProjects} ref={cardProjects}>
+                <div className={styles.containerProjects} ref={cardProjects}>
 
-                {projectsData.map((project, index) => {
-                    return <CardProject key={index} animationDelay={project.animationDelay} backgroundImage={project.backgroundImage} name={project.name} />
-                })}
+                    {projectsData.map((project, index) => {
+                        return <CardProject key={index} animationDelay={project.animationDelay} backgroundImage={project.backgroundImage} name={project.name} />
+                    })}
 
-            </div>
+                </div>
 
-        </section>
+            </section>
+        </>
 
     );
 }

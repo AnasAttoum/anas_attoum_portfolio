@@ -42,27 +42,30 @@ export default function About() {
     // }, [section_IsInView])
 
     return (
-        <section id="about" className={styles.about} ref={section}>
-            <div className={styles.picAbout} ref={pic}>
-                <div></div>
-            </div>
+        <>
+            <span id="about" style={{ paddingTop: '40px' }}></span>
+            <section className={styles.about} ref={section}>
+                <div className={styles.picAbout} ref={pic}>
+                    <div></div>
+                </div>
 
-            <div id="about" className={styles.aboutContainer}>
-
-
-                <p ref={p1}>
-                    A Bit About Me
-                </p>
-                <p ref={p2}>
-                    I have always been amazed at how web sites interface are made, That is what got me into learning Front-End
-                    development so i started working on web design using Figma after that I focused on mastering ReactJS to convert
-                    designs to reality, so it would become an actual interactive web pages.
-                    As an IT-Engineer i believe that leaning AI and machine learning will open doors to make our websites more
-                    dynamic and interactive.
-                </p>
+                <div id="about" className={styles.aboutContainer}>
 
 
-            </div>
-        </section>
+                    <p ref={p1}>
+                        A Bit About Me
+                    </p>
+                    <p ref={p2}>
+                        I have always been amazed at how web sites interface are made, That is what got me into learning Front-End
+                        development so i started working on web design using Figma after that I focused on mastering ReactJS to convert
+                        designs to reality, so it would become an actual interactive web pages.
+                        As an IT-Engineer i believe that leaning AI and machine learning will open doors to make our websites more
+                        dynamic and interactive.
+                    </p>
+
+
+                </div>
+            </section>
+        </>
     );
 }

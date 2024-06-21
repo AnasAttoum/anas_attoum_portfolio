@@ -46,7 +46,7 @@ export default function Header() {
     })
 
     const showList = () => {
-        if (window.screen.width < 1000) {
+        if (window.screen.width <= 1000) {
             list.current.classList.remove(styles.clickIconRemove)
             list.current.classList.add(styles.clickIcon)
 
@@ -55,7 +55,7 @@ export default function Header() {
     }
 
     const removeList = () => {
-        if (window.screen.width < 1000) {
+        if (window.screen.width <= 1000) {
             showListIcon.current.style.display = 'inline-block'
             list.current.classList.remove(styles.clickIcon)
             list.current.classList.add(styles.clickIconRemove)
@@ -75,9 +75,9 @@ export default function Header() {
 
                 <div className={styles.listHeader} ref={list} onClick={removeList}>
                     <div className={styles.iconResponsive2}>
-                    <div className={styles.frameIcon2}>
-                        <div className={styles.icon2}></div>
-                    </div>
+                        <div className={styles.frameIcon2}>
+                            <div className={styles.icon2}></div>
+                        </div>
                     </div>
                     <div className={`home-nav ${styles.active}`}>
                         <a href="#home"><span>H </span><span>O </span><span>M </span><span>E</span></a>
@@ -96,8 +96,7 @@ export default function Header() {
                     </div>
 
                     <div className='contact-nav'>
-                        <a href="#contact"><span>C </span><span>O </span><span>N </span><span>T </span><span>A </span><span>C
-                        </span><span>T</span></a>
+                        <a href="#contact"><span>C </span><span>O </span><span>N </span><span>T </span><span>A </span><span>C </span><span>T</span></a>
                     </div>
                 </div>
 

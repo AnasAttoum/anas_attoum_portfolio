@@ -1,6 +1,6 @@
 .cardProjects {
-    width: 30vw;
-    height: 14vw;
+    width: 40vw;
+    height: 20vw;
 
     margin-bottom: 7%;
 
@@ -78,11 +78,11 @@
 
 .cardProjects .details .more {
     text-decoration: none;
+    color: white;
 }
 
 .cardProjects:hover .details .more {
     position: relative;
-    color: white;
     z-index: 1;
 }
 
@@ -180,6 +180,16 @@
 }
 
 
+@media (max-width:1225px) {
+
+    .cardProjects {
+        width: 37vw;
+        height: 18vw;
+    }
+
+}
+
+
 
 @media (max-width:800px) {
 
@@ -187,7 +197,7 @@
         width: 100vw;
         height: 38vw;
 
-        margin-bottom: 7%;
+        margin-bottom: 10%;
     }
 
 }
