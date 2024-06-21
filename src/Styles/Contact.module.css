@@ -216,6 +216,8 @@ input:focus {
     font-size: 1.2vw;
     font-weight: 100;
     color: var(--subText);
+    color: #777;
+
 }
 
 .containerContact .rightContact p {
