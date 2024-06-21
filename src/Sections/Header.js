@@ -29,7 +29,7 @@ export default function Header() {
         window.addEventListener('scroll', () => {
             sections.forEach(section => {
                 if (window.scrollY >= (section.offsetTop - section.clientHeight / 3)) {
-                    curr = section.id;
+                    curr = section.id.slice(0,-1);
                 }
             })
 

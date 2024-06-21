@@ -30,7 +30,7 @@ export default function Projects() {
     return (
         <>
             <span id="projects" style={{ paddingTop: '100px' }}></span>
-            <section className={styles.projects} ref={section}>
+            <section id="projects2" className={styles.projects} ref={section}>
                 <div className={styles.titleProjects} ref={title}>What I Did</div>
 
                 <div className={styles.containerProjects} ref={cardProjects}>
