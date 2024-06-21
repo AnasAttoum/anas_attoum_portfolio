@@ -22,6 +22,11 @@
 
 @media (max-width:800px) {
 
+    .skills {
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
     .titleSkills {
         font-size: 40px;
     }

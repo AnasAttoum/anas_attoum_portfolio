@@ -23,6 +23,9 @@
 
 
 @media (max-width:800px) {
+    .projects{
+        padding-top: 0px;
+    }
 
     .titleProjects {
         font-size: 40px;

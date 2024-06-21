@@ -323,6 +323,9 @@ input:focus {
 
 
 @media (max-width:800px) {
+    .contact {
+        padding-top: 0px;
+    }
 
     .titleContact {
         font-size: 40px;
@@ -385,7 +388,7 @@ input:focus {
 
 }
 
-@media(max-width:550px){
+@media(max-width:550px) {
     .containerContact .rightContact h3 {
         font-size: 4.5vw;
     }
@@ -399,7 +402,7 @@ input:focus {
     }
 }
 
-@media(max-width:425px){
+@media(max-width:425px) {
     .icons>.link {
         width: 30px;
         height: 30px;

@@ -107,6 +107,13 @@
         height: 45vw;
     }
 
+    .picAbout div::after {
+        top: 15px;
+        left: 15px;
+    }
+
+    
+
 
 
 }

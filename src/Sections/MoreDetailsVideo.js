@@ -27,7 +27,7 @@ export default function MoreDetailsVideo(props) {
 
     return (
         <div className={styles.video} ref={video}>
-            <iframe src="https://drive.google.com/file/d/1s0QONoZk_wGR2GYOzBos1KQwlwfSkbkt/preview" width="90%" height="550" title={props.normalNname} allowFullScreen></iframe>
+            <iframe src={props.video} width="90%" height="550" title={props.normalNname} allowFullScreen></iframe>
         </div>
     );
 }
