@@ -28,7 +28,7 @@ export default function Skills() {
 
     return (
         <>
-            <span id="skills" style={{ paddingTop: '70px' }}></span>
+            <span id="skills" style={{ paddingTop: '25px',visibility:"hidden"}}>skills</span>
             <section id="skills2" className={styles.skills} ref={section}>
                 <div className={styles.titleSkills} ref={title}>What I Love</div>
 

@@ -31,7 +31,7 @@ export default function Projects() {
 
     return (
         <>
-            <span id="projects" style={{ paddingTop: '100px' }}></span>
+            <span id="projects" style={{ paddingTop: '55px',visibility:"hidden"}}>projects</span>
             <section id="projects2" className={styles.projects} ref={section}>
                 <div className={styles.titleProjects} ref={title}>What I Did</div>
 

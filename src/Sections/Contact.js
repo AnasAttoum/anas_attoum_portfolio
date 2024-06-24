@@ -31,7 +31,7 @@ export default function Contact() {
 
     return (
         <>
-            <span id="contact"></span>
+            <span id="contact" style={{ visibility:"hidden" }}>contact</span>
             <section id="contact2" className={styles.contact} ref={section}>
                 <div className={styles.titleContact} ref={title}>Contact Me</div>
 

@@ -29,7 +29,7 @@ export default function About() {
 
     return (
         <>
-            <span id="about" style={{ paddingTop: '40px' }}></span>
+            <span id="about" style={{visibility:"hidden" }}>about</span>
             <section id="about2" className={styles.about} ref={section}>
                 <div className={styles.picAbout} ref={pic}>
                     <div></div>
