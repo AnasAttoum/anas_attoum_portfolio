@@ -9,6 +9,7 @@ export default function Skills() {
     const { ref: section, inView: section_IsInView } = useInView()
     const { ref: title, inView: title_IsInView, entry: titleEntry } = useInView()
     const { ref: cardSkill, inView: cardSkill_IsInView, entry: cardSkillEntry } = useInView()
+    let animationDelay = 0;
 
     useEffect(() => {
         if (section_IsInView) {
@@ -34,7 +35,8 @@ export default function Skills() {
                 <div className={styles.containerSkills} ref={cardSkill}>
 
                     {skillsData.map((skill, index) => {
-                        return <CardSkill key={index} color={skill.color} text={skill.text} backgroundImage={skill.backgroundImage} animationDelay={skill.animationDelay} />
+                        animationDelay += 0.5;
+                        return <CardSkill key={index} color={skill.color} text={skill.text} backgroundImage={skill.backgroundImage} animationDelay={animationDelay} />
                     })}
 
                 </div>

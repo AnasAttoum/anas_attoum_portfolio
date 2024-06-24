@@ -38,6 +38,28 @@ export default function Contact() {
                 <div className={styles.containerContact}>
 
                     <div className={styles.leftContact}>
+                        <div className={styles.backdrop}>
+                            <h3>Let’s Connect!<br />
+                                and make something amazing together</h3>
+                            <h6>I’m currently looking for new opportunities, whether it’s a part-time of full-time position, my inbox is always open.<br /> Drop me a message!
+                            </h6>
+                            <div className={styles.icons}>
+                                <Link to={'https://github.com/AnasAttoum'} target="_blank" className={styles.link}><div></div></Link>
+                                <Link to={'https://www.linkedin.com/in/anas-attoum-ab17781a6'} target="_blank" className={styles.link}><div></div></Link>
+                                <Link to={'mailto:AnasAttoum.12321@gmail.com'} target="_blank" className={styles.link}><div></div></Link>
+                                <Link to={'tel:+963951-931-846'} target="_blank" className={styles.link}><div></div></Link>
+                            </div>
+                            <p>Code with ❤️</p>
+                        </div>
+
+                        <div className={styles.circle}></div>
+                        <div className={styles.circle}></div>
+                        <div className={styles.circle}></div>
+                        <div className={styles.circle}></div>
+
+                    </div>
+
+                    <div className={styles.rightContact}>
                         <form onSubmit={sendEmail}>
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" name="name" />
@@ -55,28 +77,6 @@ export default function Contact() {
                                 <button>S u b m i t</button>
                             </div>
                         </form>
-                    </div>
-
-                    <div className={styles.rightContact}>
-                        <div className={styles.backdrop}>
-                            <h3>Let’s Connect!<br />
-                                and make something amazing together</h3>
-                            <h6>I’m currently looking for new opportunities, whether it’s a part-time of full-time position, my inbox is always open.<br/> Drop me a message!
-                            </h6>
-                            <div className={styles.icons}>
-                                <Link to={'https://github.com/AnasAttoum'} target="_blank" className={styles.link}><div></div></Link>
-                                <Link to={'https://www.linkedin.com/in/anas-attoum-ab17781a6'} target="_blank" className={styles.link}><div></div></Link>
-                                <Link to={'mailto:AnasAttoum.12321@gmail.com'} target="_blank" className={styles.link}><div></div></Link>
-                                <Link to={'tel:+963951-931-846'} target="_blank" className={styles.link}><div></div></Link>
-                            </div>
-                            <p>Code with ❤️</p>
-                        </div>
-
-                        <div className={styles.circle}></div>
-                        <div className={styles.circle}></div>
-                        <div className={styles.circle}></div>
-                        <div className={styles.circle}></div>
-
                     </div>
 
                 </div>

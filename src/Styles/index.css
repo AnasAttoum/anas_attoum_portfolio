@@ -1,16 +1,16 @@
 :root {
     --mainColor: rgb(168, 134, 228);
-    --mainColorOpacity: rgb(168, 134, 228, .3);
+    --mainColorOpacity: rgba(0, 0, 0, 0.6);
     /* --mainColor: #aaa; */
-    /* --mainColor: rgb(240, 87, 99, .75); */
+    /* --mainColor: rgb(240, 87, 99); */
     /* --mainColor: rgb(89, 178, 86, .75); */
     /* --mainColor: rgba(98, 86, 178, 0.75); */
 
-    --secondColor: #DCCFF4;
+    --secondColor: #d1bff1;
     /* --secondColor:rgba(229, 144, 151, 0.75); */
     /* --secondColor: rgba(128, 183, 126, 0.75); */
     /* --secondColor: rgba(138, 131, 182, 0.75); */
-    --subText: #A3A3A3;
+    --subText: #939393;
 }
 
 * {

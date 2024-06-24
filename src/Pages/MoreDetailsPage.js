@@ -67,7 +67,7 @@ export default function MoreDetailsPage() {
             <MoreDetailsAboutProject logo={project.logo} text={project.text} />
 
 
-            <MoreDetailsVideo video={project.video} title={project.name} normalName={project.normalName} />
+            <MoreDetailsVideo video={project.video} normalName={project.normalName}/>
         </>
     );
 }

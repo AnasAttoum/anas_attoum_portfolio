@@ -11,6 +11,8 @@ export default function Projects() {
     const { ref: title, inView: title_IsInView, entry: titleEntry } = useInView()
     const { ref: cardProjects, inView: cardProjects_IsInView, entry: cardProjectsEntry } = useInView()
 
+    let animationDelay = 0.5;
+
     useEffect(() => {
         if (section_IsInView) {
             if (title_IsInView) {
@@ -36,7 +38,8 @@ export default function Projects() {
                 <div className={styles.containerProjects} ref={cardProjects}>
 
                     {projectsData.map((project, index) => {
-                        return <CardProject key={index} animationDelay={project.animationDelay} backgroundImage={project.backgroundImage} name={project.name} />
+                        animationDelay += 0.5;
+                        return <CardProject key={index} animationDelay={animationDelay} backgroundImage={project.backgroundImage} name={project.name} normalName={project.normalName} madeWith={project.madeWith.join(' | ')} />
                     })}
 
                 </div>

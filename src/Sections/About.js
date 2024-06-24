@@ -27,20 +27,6 @@ export default function About() {
     ])
 
 
-    // const { ref: section, inView: section_IsInView } = useInView()
-    // const p1 = useRef()
-    // const p2 = useRef()
-    // const pic = useRef()
-
-    // useEffect(() => {
-    //     if (section_IsInView) {
-    //         p1.current.className += ' letterSpacingAnimation'
-    //         p2.current.className += ' toRightAnimation'
-    //         pic.current.className += ' opacityAnimation'
-    //         pic.current.style = `animation-delay: 2s`
-    //     }
-    // }, [section_IsInView])
-
     return (
         <>
             <span id="about" style={{ paddingTop: '40px' }}></span>

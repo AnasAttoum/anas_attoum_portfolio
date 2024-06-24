@@ -49,9 +49,40 @@
     backdrop-filter: blur(3px);
 }
 
+
+.title {
+    position: absolute;
+    font-size: 2vw;
+    text-align: center;
+    top: 0;
+    color: white;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: all .2s;
+}
+.cardProjects:hover .title {
+    opacity: 1;
+    transform: translateY(20px);
+}
+.title2 {
+    position: absolute;
+    font-size: 1.2vw;
+    text-align: center;
+    bottom: 0;
+    color: #ddd;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: all .2s;
+}
+.cardProjects:hover .title2 {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+
 .cardProjects .details {
     position: absolute;
-    font-size: 25px;
+    font-size: 2vw;
     padding: 5px;
 
     opacity: 0;
@@ -66,8 +97,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
-
 }
 
 .cardProjects:hover .details {
@@ -200,12 +229,22 @@
         margin-bottom: 10%;
     }
 
+    .title {
+        font-size: 5vw;
+    }
+    .title2 {
+        font-size: 3vw;
+    }
+    .cardProjects .details {
+        font-size: 4vw;
+    }
+
 }
 
 @media (max-width:450px) {
 
     .cardProjects .details {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .cardProjects .details::before,

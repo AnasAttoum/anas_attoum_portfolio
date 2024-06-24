@@ -17,124 +17,14 @@
     padding: 80px;
 
     position: relative;
+    column-gap: 10%;
 }
+
+
+
+
 
 .containerContact .leftContact {
-    width: 60%;
-}
-
-.containerContact .leftContact form input,
-.containerContact .leftContact form textarea {
-    display: inline-block;
-    width: 80%;
-    padding: 20px;
-    margin-right: 10%;
-    resize: none;
-    border: 1px solid #666;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
-
-    margin-top: 0;
-    caret-color: var(--mainColor);
-
-}
-
-/* remove arrows from input type number */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-/* remove focus from input */
-textarea:focus,
-input:focus {
-    outline: none;
-}
-
-.containerContact .leftContact form label {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-
-
-.containerContact .leftContact form div {
-    display: flex;
-    align-items: center;
-}
-
-.containerContact .leftContact form div button {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 85%;
-    margin-top: 60px;
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    background-color: #333;
-
-    color: white;
-    font-size: 20px;
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    overflow: hidden;
-
-}
-
-.containerContact .leftContact form div button::after {
-    content: '';
-    position: absolute;
-    right: 10vw;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2em' height='2em' viewBox='0 0 1792 1792'%3E%3Cpath fill='white' d='M1764 11q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-453-185l-242 295q-18 23-49 23q-13 0-22-4q-19-7-30.5-23.5T640 1728v-349l864-1059l-1069 925l-395-162q-37-14-40-55q-2-40 32-59L1696 9q15-9 32-9q20 0 36 11'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    width: 2em;
-    height: 2em;
-    transform: translate(-100px, 100px);
-
-}
-
-.containerContact .leftContact form div button:hover::after {
-    animation: submit .3s forwards;
-}
-
-@keyframes submit {
-    to {
-        transform: translate(0);
-    }
-}
-
-.containerContact .leftContact form div button:not(:hover)::after {
-    animation: removeSubmit .3s forwards;
-}
-
-@keyframes removeSubmit {
-    from {
-        transform: translate(0);
-    }
-
-    to {
-        transform: translate(100px, -100px);
-    }
-}
-
-
-
-
-.containerContact .rightContact {
     font-family: sans-serif;
     width: 40%;
     position: relative;
@@ -144,7 +34,7 @@ input:focus {
     align-items: center;
 }
 
-.containerContact .rightContact .backdrop {
+.containerContact .leftContact .backdrop {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +59,7 @@ input:focus {
     height: 7vw;
     border-radius: 50%;
 
-    background-color: var(--mainColor);
+    background-color: rgb(168, 134, 228, .7);
 
     z-index: -1;
     animation: circ 5s infinite alternate;
@@ -205,21 +95,21 @@ input:focus {
     left: -3vw;
 }
 
-.containerContact .rightContact h3 {
+.containerContact .leftContact h3 {
     text-align: center;
     font-size: 2.2vw;
     color: var(--mainColor);
     line-height: 1.3em;
 }
 
-.containerContact .rightContact h6 {
+.containerContact .leftContact h6 {
     font-size: 1.2vw;
     font-weight: 100;
     color: #777;
 
 }
 
-.containerContact .rightContact p {
+.containerContact .leftContact p {
     font-size: 1.2vw;
     font-weight: 100;
     color: #777;
@@ -294,6 +184,124 @@ input:focus {
 
 
 
+
+
+.containerContact .rightContact {
+    width: 50%;
+}
+
+.containerContact .rightContact form input,
+.containerContact .rightContact form textarea {
+    display: inline-block;
+    width: 93%;
+    padding: 20px;
+    resize: none;
+    border: 1px solid #666;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+
+    margin-top: 0;
+    caret-color: var(--mainColor);
+
+}
+
+/* remove arrows from input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* remove focus from input */
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.containerContact .rightContact form label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+.containerContact .rightContact form div {
+    display: flex;
+    align-items: center;
+}
+
+.containerContact .rightContact form div button {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background-color: #333;
+
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.containerContact .rightContact form div button::after {
+    content: '';
+    position: absolute;
+    right: 10vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2em' height='2em' viewBox='0 0 1792 1792'%3E%3Cpath fill='white' d='M1764 11q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-453-185l-242 295q-18 23-49 23q-13 0-22-4q-19-7-30.5-23.5T640 1728v-349l864-1059l-1069 925l-395-162q-37-14-40-55q-2-40 32-59L1696 9q15-9 32-9q20 0 36 11'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    transform: translate(-100px, 100px);
+
+}
+
+.containerContact .rightContact form div button:hover::after {
+    animation: submit .3s forwards;
+}
+
+@keyframes submit {
+    to {
+        transform: translate(0);
+    }
+}
+
+.containerContact .rightContact form div button:not(:hover)::after {
+    animation: removeSubmit .3s forwards;
+}
+
+@keyframes removeSubmit {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(100px, -100px);
+    }
+}
+
+
+
+
+
+
 @media (max-width:1000px) {
 
     .containerContact .circle {
@@ -325,7 +333,7 @@ input:focus {
 
 
 
-@media (max-width:800px) {
+@media (max-width:850px) {
     .contact {
         padding-top: 0px;
     }
@@ -339,31 +347,31 @@ input:focus {
         padding: 40px;
     }
 
-    .containerContact .leftContact {
+    .containerContact .rightContact {
         width: 100%;
+        margin-top: 100px;
+
     }
 
-    .containerContact .leftContact form input,
-    .containerContact .leftContact form textarea {
+    .containerContact .rightContact form input,
+    .containerContact .rightContact form textarea {
         display: inline-block;
-        width: 90%;
         margin-right: 10%;
         margin-bottom: 5%;
     }
 
-    .containerContact .leftContact form div {
+    .containerContact .rightContact form div {
         display: flex;
         justify-content: center;
     }
 
-    .containerContact .leftContact form div button {
-        width: 96%;
+    .containerContact .rightContact form div button {
         margin-top: 30px;
-        margin-bottom: 90px;
+        margin-bottom: 10px;
         padding: 20px;
     }
 
-    .containerContact .rightContact {
+    .containerContact .leftContact {
         width: 100%;
     }
 
@@ -372,15 +380,15 @@ input:focus {
         height: 12vw;
     }
 
-    .containerContact .rightContact h3 {
+    .containerContact .leftContact h3 {
         font-size: 4vw;
     }
 
-    .containerContact .rightContact h6 {
+    .containerContact .leftContact h6 {
         font-size: 2.5vw;
     }
 
-    .containerContact .rightContact p {
+    .containerContact .leftContact p {
         font-size: 2vw;
     }
 
@@ -392,15 +400,15 @@ input:focus {
 }
 
 @media(max-width:550px) {
-    .containerContact .rightContact h3 {
+    .containerContact .leftContact h3 {
         font-size: 4.5vw;
     }
 
-    .containerContact .rightContact h6 {
+    .containerContact .leftContact h6 {
         font-size: 3.5vw;
     }
 
-    .containerContact .rightContact p {
+    .containerContact .leftContact p {
         font-size: 3vw;
     }
 }
@@ -440,6 +448,10 @@ input:focus {
         width: 20px;
         height: 20px;
         margin: 10px;
+    }
+
+    .containerContact .rightContact form div button::after {
+        right: 2vw;
     }
 
 }
