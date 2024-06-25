@@ -201,6 +201,7 @@
 
     margin-top: 0;
     caret-color: var(--mainColor);
+    background-color: rgb(168, 134, 228, .05);
 
 }
 
@@ -225,8 +226,10 @@ input:focus {
 
 .containerContact .rightContact form label {
     font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
+
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -258,6 +261,10 @@ input:focus {
 
     position: relative;
     overflow: hidden;
+
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 
 }
 

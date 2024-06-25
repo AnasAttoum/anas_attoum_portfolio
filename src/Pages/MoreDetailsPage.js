@@ -50,7 +50,7 @@ export default function MoreDetailsPage() {
 
     return (
         <>
-            <MoreDetailsHeader title={project.title} code={project.code} codeURL={project.codeURL} demo={project.demo} demoURL={project.demoURL} />
+            <MoreDetailsHeader title={project.title} codeURL={project.codeURL} demoURL={project.demoURL} />
 
             <div className={styles.title} ref={title}>
                 Overview

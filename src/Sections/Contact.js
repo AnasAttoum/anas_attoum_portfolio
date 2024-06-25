@@ -61,16 +61,16 @@ export default function Contact() {
 
                     <div className={styles.rightContact}>
                         <form onSubmit={sendEmail}>
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">N a m e</label>
                             <input type="text" id="name" name="name" />
 
-                            <label htmlFor="number">Number</label>
+                            <label htmlFor="number">N u m b e r</label>
                             <input type="number" id="number" name="number" />
 
-                            <label htmlFor="number">Email</label>
+                            <label htmlFor="number">E m a i l</label>
                             <input type="email" id="email" name="email" />
 
-                            <label htmlFor="message">Message</label>
+                            <label htmlFor="message">M e s s a g e</label>
                             <textarea id="message" name="message" rows="5"></textarea>
 
                             <div>

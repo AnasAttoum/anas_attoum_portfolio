@@ -41,11 +41,11 @@ export default function MoreDetailsHeader(props) {
             <p className={styles.title} ref={title}></p>
 
             <div className={styles.buttons}>
-                {props.code? <div>
+                {props.codeURL!==''? <div>
                     <Link to={props.codeURL} target="_blank"><span>C </span><span>O </span><span>D </span><span>E</span></Link>
                 </div>:null}
 
-                {props.demo? <div>
+                {props.demoURL!==''? <div>
                     <Link to={props.demoURL} target="_blank"><span>D </span><span>E </span><span>M </span><span>O</span></Link>
                 </div>:null}
             </div>
