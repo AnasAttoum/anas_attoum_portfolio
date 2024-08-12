@@ -45,7 +45,7 @@ export default function Contact() {
                             </h6>
                             <div className={styles.icons}>
                                 <Link to={'https://github.com/AnasAttoum'} target="_blank" className={styles.link}><div></div></Link>
-                                <Link to={'https://www.linkedin.com/in/anas-attoum-ab17781a6'} target="_blank" className={styles.link}><div></div></Link>
+                                <Link to={'https://www.linkedin.com/in/anas-attoum'} target="_blank" className={styles.link}><div></div></Link>
                                 <Link to={'mailto:AnasAttoum.12321@gmail.com'} target="_blank" className={styles.link}><div></div></Link>
                                 <Link to={'tel:+963951-931-846'} target="_blank" className={styles.link}><div></div></Link>
                             </div>
