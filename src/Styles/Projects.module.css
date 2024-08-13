@@ -56,8 +56,8 @@
     
 }
 
-@media (max-width:350px) {
+@media (max-width:400px) {
     .categories>div{
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }

@@ -82,6 +82,7 @@ export default function Projects() {
                     <div id="all">All</div>
                     <div id="project">Projects</div>
                     <div id="page">Pages</div>
+                    <div id="game">Games</div>
                     <div id="component">Components</div>
                 </div>
 
