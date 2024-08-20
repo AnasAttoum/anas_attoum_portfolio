@@ -73,6 +73,20 @@ export const skillsData = [
 
 export const projectsData = [
     {
+        name: 'BookNook',
+        type: 'project',
+        normalName: 'Book Nook',
+        backgroundImage: 'url(/Images/Projects/BookNook/BookNook.png)',
+        title: 'B o o k &nbsp; N o o k',
+        codeURL: 'https://github.com/AnasAttoum/book_nook',
+        demoURL: 'https://book-nook-24.vercel.app/',
+        mockup: 'url(/Images/Projects/BookNook/BookNookMockup.png)',
+        logo: 'url(/Images/Projects/BookNook/BookNookLogo.png)',
+        text: 'Book Nook is a website for borrowing books,This website designed while training at Prokoders Company.<br/>Find the book you’re looking for and keep the story going...',
+        madeWith: ['React.js', 'Redux', 'JavaScript', 'Tailwindcss', 'MUI', 'CSS'],
+        video: 'https://drive.google.com/file/d/16EnQCr3iqIvuSQzlv33QGJn--2lKzF0P/preview',
+    },
+    {
         name: 'FlipZone',
         type: 'game',
         normalName: 'Flip Zone',
@@ -125,7 +139,7 @@ export const projectsData = [
         mockup: 'url(/Images/Projects/FashionCOM/FashionCOMMockup.png)',
         logo: 'url(/Images/Projects/FashionCOM/FashionCOMLogo.png)',
         text: 'Fashion COM an online shopping website for clothes.<br/>It’s convenient, fast and easy to use.',
-        madeWith: ['ReactJS', 'Redux', 'JavaScript', 'Bootstrap', 'MUI', 'Grommet', 'CSS'],
+        madeWith: ['React.js', 'Redux', 'JavaScript', 'Bootstrap', 'MUI', 'Grommet', 'CSS'],
         video: 'https://drive.google.com/file/d/1x855tAs9x8mIE3DjCO1Ign0x3zwZL9bX/preview',
     },
     {
@@ -167,7 +181,7 @@ export const projectsData = [
         mockup: 'url(/Images/Projects/FindWorkWithMe/FindWorkWithMeMockup.png)',
         logo: 'url(/Images/Projects/FindWorkWithMe/FindWorkWithMeLogo.png)',
         text: 'This was my first project as a React developer that i made at my fourth year (2022) in college.<br/>The idea is to create an interactive website for people and freelancer to help each of them find what they’re looking for.',
-        madeWith: ['ReactJS', 'Firebase', 'CSS', 'MaterialUI', 'Grommet'],
+        madeWith: ['React.js', 'Firebase', 'CSS', 'MaterialUI', 'Grommet'],
         video: 'https://drive.google.com/file/d/1iDGBHoBhlQ24JBeZ5baKk0i-GZYZUHBu/preview'
     },
     // {
