@@ -73,6 +73,20 @@ export const skillsData = [
 
 export const projectsData = [
     {
+        name: 'DashLinkMobile',
+        type: 'project',
+        normalName: 'DashLink Mobile',
+        backgroundImage: 'url(/Images/Projects/DashLinkMobile/DashLinkMobile.png)',
+        title: 'D a s h L i n k &nbsp; M ob i l e',
+        codeURL: 'https://github.com/AnasAttoum/dashlink_mobile',
+        demoURL: 'https://dashlink-mobile.vercel.app/',
+        mockup: 'url(/Images/Projects/DashLinkMobile/DashLinkMobileMockup.png)',
+        logo: 'url(/Images/Projects/DashLinkMobile/DashLinkMobileLogo.png)',
+        text: 'DashLink Mobile is a state-of-the-art and user-friendly dashboard, It’s designed as a content management system for a mobile company.<br/>This project designed while training at Prokoders Company.',
+        madeWith: ['React.js', 'Redux', 'JavaScript', 'Tailwindcss', 'MUI', 'CSS'],
+        video: 'https://drive.google.com/file/d/1CSk_wrUoSkMPbDfHvVAxHIStm2wXtcWe/preview',
+    },
+    {
         name: 'BookNook',
         type: 'project',
         normalName: 'Book Nook',
@@ -82,7 +96,7 @@ export const projectsData = [
         demoURL: 'https://book-nook-24.vercel.app/',
         mockup: 'url(/Images/Projects/BookNook/BookNookMockup.png)',
         logo: 'url(/Images/Projects/BookNook/BookNookLogo.png)',
-        text: 'Book Nook is a website for borrowing books,This website designed while training at Prokoders Company.<br/>Find the book you’re looking for and keep the story going...',
+        text: 'Book Nook is a website for borrowing books, This website designed while training at Prokoders Company.<br/>Find the book you’re looking for and keep the story going...',
         madeWith: ['React.js', 'Redux', 'JavaScript', 'Tailwindcss', 'MUI', 'CSS'],
         video: 'https://drive.google.com/file/d/16EnQCr3iqIvuSQzlv33QGJn--2lKzF0P/preview',
     },
