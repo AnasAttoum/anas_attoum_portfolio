@@ -11,7 +11,6 @@ function App() {
 
           <Route path='/' element={<MainPage />} />
           <Route path='project/:projectName' element={<MoreDetailsPage />} />
-          <Route path='more' element={<MoreDetailsPage />} />
 
         </Routes>
       </BrowserRouter>

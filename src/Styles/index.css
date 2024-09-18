@@ -24,15 +24,43 @@ body {
     overflow-x: hidden;
     user-select: none;
 }
+/* Scrollbar */
+body {
+    --sb-thumb-color: #a886e4;
+  --sb-track-color: #232e33bc;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  /* border-radius: 3px; */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  /* border-radius: 3px; */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
 
 
 
 /*                                              Animations                                           */
-.toRightAnimation{
+.toRightAnimation {
     opacity: 0;
     transform: translateX(-100px);
     animation: toRightAnimation .5s linear 1s forwards;
 }
+
 @keyframes toRightAnimation {
     100% {
         opacity: 1;
@@ -42,11 +70,12 @@ body {
 
 
 
-.toTopAnimation{
+.toTopAnimation {
     opacity: 0;
     transform: translateY(50px);
     animation: toTopAnimation .5s linear 1.5s forwards;
 }
+
 @keyframes toTopAnimation {
     100% {
         opacity: 1;
@@ -56,11 +85,12 @@ body {
 
 
 
-.toLeftAnimation{
+.toLeftAnimation {
     opacity: 0;
     transform: translateX(100px);
     animation: toLeftAnimation .5s linear 2s forwards;
 }
+
 @keyframes toLeftAnimation {
     100% {
         opacity: 1;
@@ -69,10 +99,11 @@ body {
 }
 
 
-.opacityAnimation{
+.opacityAnimation {
     opacity: 0;
     animation: opacityAnimation .5s linear 2.5s forwards;
 }
+
 @keyframes opacityAnimation {
     100% {
         opacity: 1;
@@ -80,11 +111,12 @@ body {
 }
 
 
-.letterSpacingAnimation{
+.letterSpacingAnimation {
     opacity: 0;
     letter-spacing: 20px;
     animation: letterSpacingAnimation .5s linear forwards;
 }
+
 @keyframes letterSpacingAnimation {
     100% {
         opacity: 1;
@@ -95,11 +127,12 @@ body {
 
 
 /* Animation For Skills */
-.scaleAnimation>div{
+.scaleAnimation>div {
     opacity: 0;
     transform: scale(0);
     animation: scaleAnimation .5s linear forwards;
 }
+
 @keyframes scaleAnimation {
     100% {
         opacity: 1;
@@ -108,16 +141,18 @@ body {
 }
 
 
-.moveProjectsAnimation>div:nth-child(odd){
+.moveProjectsAnimation>div:nth-child(odd) {
     opacity: 0;
     transform: translateY(-100px);
     animation: toTopAnimation .5s linear forwards;
 }
-.moveProjectsAnimation>div:nth-child(even){
+
+.moveProjectsAnimation>div:nth-child(even) {
     opacity: 0;
     transform: translateY(100px);
     animation: toTopAnimation .5s linear forwards;
 }
+
 @keyframes toTopAnimation {
     100% {
         opacity: 1;
