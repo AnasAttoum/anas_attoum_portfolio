@@ -58,16 +58,18 @@ export default function MoreDetailsPage() {
 
             <div className={styles.image} style={{ backgroundImage: project.mockup }} ref={image}></div>
 
-            <div className={styles.madeWithContainer} ref={madeWith}>
-                {(project.madeWith) ? project.madeWith.map((value,index) => {
-                    return <div className={styles.madeWith} key={index}>{value}</div>
-                }) : null}
+            <div style={{display:'flex',justifyContent:'center'}}>
+                <div className={styles.madeWithContainer} ref={madeWith}>
+                    {(project.madeWith) ? project.madeWith.map((value, index) => {
+                        return <div className={styles.madeWith} key={index}>{value}</div>
+                    }) : null}
+                </div>
             </div>
 
             <MoreDetailsAboutProject logo={project.logo} text={project.text} />
 
 
-            <MoreDetailsVideo video={project.video} normalName={project.normalName}/>
+            <MoreDetailsVideo video={project.video} normalName={project.normalName} />
         </>
     );
 }
