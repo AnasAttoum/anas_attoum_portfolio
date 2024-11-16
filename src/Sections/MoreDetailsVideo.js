@@ -12,7 +12,6 @@ export default function MoreDetailsVideo(props) {
             top: 0,
             behavior: 'instant'
         })
-
     }, [])
 
     useEffect(() => {

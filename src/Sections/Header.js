@@ -4,18 +4,19 @@ import styles from '../Styles/Header.module.css';
 import Logo from "../Components/Logo";
 
 export default function Header() {
-    const showListIcon = useRef()
+    const header = useRef();
+    const showListIcon = useRef();
     const list = useRef()
 
-    var prevScrollpos = window.pageYOffset;
+    var prevScrollpos = window.scrollY;
     window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
         if (prevScrollpos >= currentScrollPos) {
-            document.getElementById("header").style.top = "0";
-            document.getElementById("header").style.transition = "all .3s";
+            header.current.style.top = "0";
+            header.current.style.transition = "all .3s";
         } else {
-            document.getElementById("header").style.top = "-80px";
-            document.getElementById("header").style.transition = "all .3s";
+            header.current.style.top = "-80px";
+            header.current.style.transition = "all .3s";
         }
         prevScrollpos = currentScrollPos;
     }
@@ -64,7 +65,7 @@ export default function Header() {
 
 
     return (
-        <div id="header" className={styles.header}>
+        <div ref={header} id="header" className={styles.header}>
 
             <Logo />
 
