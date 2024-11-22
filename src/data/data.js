@@ -87,7 +87,7 @@ export const projectsData = [
         demoURL: 'https://true-skin.vercel.app/',
         mockup: 'url(/images/projects/trueSkin/trueSkinMockup.png)',
         logo: 'url(/images/projects/trueSkin/trueSkinLogo.png)',
-        text: 'True Skin is more than just an online store, it’s a comprehensive solution that bridges the gap between product availability and customer needs.<br /> By focusing on user experience and offering a robust dashboard for sellers.',
+        text: 'True Skin is more than just an online store, it’s a comprehensive solution that bridges the gap between product availability and customer needs.<br />By focusing on user experience and offering a robust dashboard for sellers.',
         madeWith: ['React.js', 'Vite', 'Redux-toolkit', 'TypeScript', 'Helmet', 'Tailwindcss', 'MUI', 'Yup', 'CSS'],
         video: 'https://drive.google.com/file/d/1XmNt0F1Mjhz5WcC2rfaJ32v4z6MvaECw/preview',
     },
