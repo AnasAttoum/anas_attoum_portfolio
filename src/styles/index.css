@@ -1,0 +1,181 @@
+:root {
+    --mainColor: #a886e4;
+    --mainColorOpacity: rgba(0, 0, 0, 0.6);
+    /* --mainColor: #aaa; */
+    /* --mainColor: rgb(240, 87, 99); */
+    /* --mainColor: rgb(89, 178, 86, .75); */
+    /* --mainColor: rgba(98, 86, 178, 0.75); */
+
+    --secondColor: #d1bff1;
+    /* --secondColor:rgba(229, 144, 151, 0.75); */
+    /* --secondColor: rgba(128, 183, 126, 0.75); */
+    /* --secondColor: rgba(138, 131, 182, 0.75); */
+    --subText: #939393;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(168, 134, 228, .05);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    user-select: none;
+}
+/* Scrollbar */
+body {
+    --sb-thumb-color: #a886e4;
+  --sb-track-color: #232e33bc;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  /* border-radius: 3px; */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  /* border-radius: 3px; */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+/*                                              Loading                                           */
+.loading {
+  width:12px;
+  height:12px;
+  border-radius: 50%;
+  clip-path: inset(-45px);
+  color: #a886e4;
+  box-shadow: -60px 15px,-60px 15px,-60px 15px;
+  transform: translateY(-15px);
+  animation: d9 1s infinite linear;
+}
+
+@keyframes d9{ 
+  16.67% {box-shadow:-60px 15px,-60px 15px,19px 15px}
+  33.33% {box-shadow:-60px 15px,  0px 15px,19px 15px}
+  40%,60%{box-shadow:-19px 15px,  0px 15px,19px 15px}
+  66.67% {box-shadow:-19px 15px,  0px 15px,60px 15px}
+  83.33% {box-shadow:-19px 15px, 60px 15px,60px 15px}
+  100%   {box-shadow: 60px 15px, 60px 15px,60px 15px}
+}
+
+
+/*                                              Animations                                           */
+.toRightAnimation {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: toRightAnimation .5s linear 1s forwards;
+}
+
+@keyframes toRightAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.toTopAnimation {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: toTopAnimation .5s linear 1.5s forwards;
+}
+
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+.toLeftAnimation {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: toLeftAnimation .5s linear 2s forwards;
+}
+
+@keyframes toLeftAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.opacityAnimation {
+    opacity: 0;
+    animation: opacityAnimation .5s linear 2.5s forwards;
+}
+
+@keyframes opacityAnimation {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.letterSpacingAnimation {
+    opacity: 0;
+    letter-spacing: 20px;
+    animation: letterSpacingAnimation .5s linear forwards;
+}
+
+@keyframes letterSpacingAnimation {
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
+}
+
+
+
+/* Animation For Skills */
+.scaleAnimation>div {
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleAnimation .5s linear forwards;
+}
+
+@keyframes scaleAnimation {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.moveProjectsAnimation>div:nth-child(odd) {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+
+.moveProjectsAnimation>div:nth-child(even) {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
