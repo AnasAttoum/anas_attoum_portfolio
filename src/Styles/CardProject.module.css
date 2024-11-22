@@ -94,6 +94,7 @@
     border-radius: 10px;
 
     display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -101,6 +102,7 @@
 
 .cardProjects:hover .details {
     position: absolute;
+    visibility: visible;
     opacity: 1;
     overflow: hidden;
 }

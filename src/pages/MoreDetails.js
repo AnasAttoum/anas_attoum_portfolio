@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useParams } from 'react-router-dom';
 
-import { projectsData } from '../Data/Data'
-import styles from '../Styles/MoreDetailsPage.module.css'
-import MoreDetailsHeader from "../Sections/MoreDetailsHeader";
-import MoreDetailsAboutProject from "../Sections/MoreDetailsAboutProject";
-import MoreDetailsVideo from "../Sections/MoreDetailsVideo";
+import { projectsData } from "../data/data"; 
+import styles from '../styles/moreDetailsPage.module.css'
+import MoreDetailsHeader from "../components/MoreDetailsHeader";
+import MoreDetailsAboutProject from "../sections/MoreDetailsAboutProject";
+import MoreDetailsVideo from "../sections/MoreDetailsVideo";
 
 export default function MoreDetailsPage() {
 

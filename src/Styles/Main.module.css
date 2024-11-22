@@ -194,7 +194,7 @@
 }
 
 .pic>div:nth-child(1) {
-    background-image: url('../../public/Images/Anas_Attoum_Pic.jpg');
+    background-image: url('../../public/images/Anas_Attoum_Pic.jpg');
     background-size: cover;
 
     width: 20vw;

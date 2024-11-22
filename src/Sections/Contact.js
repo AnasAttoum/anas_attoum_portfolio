@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser'
 
-import styles from '../Styles/Contact.module.css';
+import styles from '../styles/contact.module.css';
 
 export default function Contact() {
     const { ref: section, inView: section_IsInView } = useInView()
@@ -62,13 +62,13 @@ export default function Contact() {
                     <div className={styles.rightContact}>
                         <form onSubmit={sendEmail}>
                             <label htmlFor="name">N a m e</label>
-                            <input type="text" id="name" name="name" />
+                            <input type="text" id="name" name="name" /><br/>
 
-                            <label htmlFor="number">N u m b e r</label>
-                            <input type="number" id="number" name="number" />
+                            {/* <label htmlFor="number">N u m b e r</label>
+                            <input type="number" id="number" name="number" /><br/> */}
 
                             <label htmlFor="number">E m a i l</label>
-                            <input type="email" id="email" name="email" />
+                            <input type="email" id="email" name="email" /><br/>
 
                             <label htmlFor="message">M e s s a g e</label>
                             <textarea id="message" name="message" rows="5"></textarea>

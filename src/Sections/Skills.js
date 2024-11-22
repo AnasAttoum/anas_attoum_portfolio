@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { skillsData } from "../Data/Data";
-import styles from '../Styles/Skills.module.css';
-import CardSkill from "../Components/CardSkill";
+import { skillsData } from "../data/data";
+import styles from '../styles/skills.module.css';
+import CardSkill from "../components/CardSkill";
 
 export default function Skills() {
     const { ref: section, inView: section_IsInView } = useInView()

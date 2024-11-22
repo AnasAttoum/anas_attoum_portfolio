@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import styles from '../Styles/About.module.css';
+import styles from '../styles/about.module.css';
 
 export default function About() {
     const { ref: section, inView: section_IsInView } = useInView()

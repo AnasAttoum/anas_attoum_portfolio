@@ -1,4 +1,4 @@
-import styles from '../Styles/CardSkill.module.css';
+import styles from '../styles/cardSkill.module.css';
 
 export default function CardSkill(props) {
     return (

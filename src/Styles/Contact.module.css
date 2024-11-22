@@ -188,6 +188,7 @@
 
 .containerContact .rightContact {
     width: 50%;
+    padding-top: 20px;
 }
 
 .containerContact .rightContact form input,
@@ -357,13 +358,12 @@ input:focus {
     .containerContact .rightContact {
         width: 100%;
         margin-top: 100px;
-
     }
 
     .containerContact .rightContact form input,
     .containerContact .rightContact form textarea {
         display: inline-block;
-        margin-right: 10%;
+        /* margin-right: 10%; */
         margin-bottom: 5%;
     }
 

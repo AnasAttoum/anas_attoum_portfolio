@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
-import styles from '../Styles/Header.module.css';
-import Logo from "../Components/Logo";
+import styles from '../styles/header.module.css';
+import Logo from "./Logo";
 
 export default function Header() {
     const header = useRef();
@@ -11,14 +11,16 @@ export default function Header() {
     var prevScrollpos = window.scrollY;
     window.onscroll = function () {
         var currentScrollPos = window.scrollY;
-        if (prevScrollpos >= currentScrollPos) {
-            header.current.style.top = "0";
-            header.current.style.transition = "all .3s";
-        } else {
-            header.current.style.top = "-80px";
-            header.current.style.transition = "all .3s";
+        if(header.current){
+            if (prevScrollpos >= currentScrollPos) {
+              header.current.style.top = "0";
+              header.current.style.transition = "all .3s";
+            } else {
+              header.current.style.top = "-80px";
+              header.current.style.transition = "all .3s";
+            }
+            prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;
     }
 
 
@@ -29,7 +31,7 @@ export default function Header() {
         let curr = 'home';
         window.addEventListener('scroll', () => {
             sections.forEach(section => {
-                if (window.scrollY >= (section.offsetTop - section.clientHeight / 3)) {
+                if (window.scrollY >= (section.offsetTop - section.clientHeight / 4)) {
                     curr = section.id.slice(0,-1);
                 }
             })

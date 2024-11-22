@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 
-import styles from '../Styles/MoreDetailsAboutProject.module.css';
+import styles from '../styles/moreDetailsAboutProject.module.css';
 
 export default function MoreDetailsAboutProject(props) {
 

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { projectsData } from "../Data/Data";
-import styles from '../Styles/Projects.module.css';
-import CardProject from "../Components/CardProject";
+import { projectsData } from "../data/data";
+import styles from '../styles/projects.module.css';
+import CardProject from "../components/CardProject";
 
 export default function Projects() {
 

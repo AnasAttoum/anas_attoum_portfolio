@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-import Header from "../Sections/Header";
-import Main from "../Sections/Main";
-import About from "../Sections/About";
-import Skills from "../Sections/Skills";
-import Projects from "../Sections/Projects";
-import Contact from "../Sections/Contact";
+import Header from "../components/Header";
+import Main from "../sections/Main";
+import About from "../sections/About";
+import Skills from "../sections/Skills";
+import Projects from "../sections/Projects";
+import Contact from "../sections/Contact";
 
 export default function MainPage() {
 

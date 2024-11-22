@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import MainPage from './Pages/MainPage';
-import MoreDetailsPage from './Pages/MoreDetailsPage';
+import { lazy, Suspense } from 'react';
+import Loading from './pages/Loading';
+
+const LazyMainPage = lazy(() => import("./pages/MainPage"));
+const LazyMoreDetailsPage = lazy(() => import("./pages/MoreDetails"));
 
 function App() {
   return (
@@ -9,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path='/' element={<MainPage />} />
-          <Route path='project/:projectName' element={<MoreDetailsPage />} />
+          <Route path='/' element={<Suspense fallback={<Loading />}><LazyMainPage /></Suspense>} />
+          <Route path='project/:projectName' element={<Suspense fallback={<Loading />}><LazyMoreDetailsPage /></Suspense>} />
 
         </Routes>
       </BrowserRouter>

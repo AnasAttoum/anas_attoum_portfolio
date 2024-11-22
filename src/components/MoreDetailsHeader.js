@@ -2,12 +2,13 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../Components/Logo';
-import styles from '../Styles/MoreDetailsHeader.module.css';
+import Logo from './Logo';
+import styles from '../styles/moreDetailsHeader.module.css';
 
 export default function MoreDetailsHeader(props) {
 
-    const title=useRef()
+    const title = useRef();
+    const MoreDetailsHeader = useRef();
 
     useEffect(()=>{
         if (props.title){
@@ -15,22 +16,22 @@ export default function MoreDetailsHeader(props) {
         }
     },[props.title])
 
-    var prevScrollpos = window.pageYOffset;
+    var prevScrollpos = window.scrollY;
     window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
         if (prevScrollpos >= currentScrollPos) {
-            document.getElementById("MoreDetailsHeader").style.top = "0";
-            document.getElementById("MoreDetailsHeader").style.transition = "all .3s";
+            MoreDetailsHeader.current.style.top = "0";
+            MoreDetailsHeader.current.style.transition = "all .3s";
         } else {
-            document.getElementById("MoreDetailsHeader").style.top = "-80px";
-            document.getElementById("MoreDetailsHeader").style.transition = "all .3s";
+            MoreDetailsHeader.current.style.top = "-80px";
+            MoreDetailsHeader.current.style.transition = "all .3s";
         }
         prevScrollpos = currentScrollPos;
     }
     
 
     return (
-        <div id="MoreDetailsHeader" className={styles.header}>
+        <div ref={MoreDetailsHeader} className={styles.header}>
 
             <Link to={'..'} className={styles.back}>
                 <div className={styles.icon}></div>

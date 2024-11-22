@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom'
 
-import styles from '../Styles/Main.module.css';
+import styles from '../styles/main.module.css';
 
 export default function Main() {
 

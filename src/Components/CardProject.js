@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import styles from '../Styles/CardProject.module.css';
+import styles from '../styles/cardProject.module.css';
 
 export default function CardProject(props) {
     return (

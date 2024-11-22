@@ -1,7 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
-import styles from '../Styles/MoreDetailsVideo.module.css';
+import styles from '../styles/moreDetailsVideo.module.css';
 
 export default function MoreDetailsVideo(props) {
 
