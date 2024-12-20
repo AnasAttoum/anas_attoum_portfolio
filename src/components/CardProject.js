@@ -5,7 +5,7 @@ import styles from '../styles/cardProject.module.css';
 export default function CardProject(props) {
     return (
         <div className={styles.cardProjects} style={{animationDelay:props.animationDelay + 's'}}>
-            <div style={{backgroundImage:props.backgroundImage}}></div>
+            <div style={{backgroundImage:props.backgroundImage, borderRadius:'10px'}}></div>
             <div className={styles.leftCardProjects}></div>
             <div className={styles.rightCardProjects}></div>
             <div className={styles.title}>{props.normalName}</div>
