@@ -1,0 +1,29 @@
+.selectLanguage{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.selectLanguage:hover{
+    background-color: #ddd;
+}
+
+.languagesList{
+    position: absolute;
+    top: 80px;
+    transform: translateX(-15px);
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.languagesList>div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.languagesList>div:hover{
+    background-color: #eee;
+    border-radius: 5px;
+}

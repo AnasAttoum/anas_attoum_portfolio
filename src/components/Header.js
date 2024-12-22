@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 
 import styles from '../styles/header.module.css';
 import Logo from "./Logo";
+import SelectLanguage from "./SelectLanguage";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
     const header = useRef();
@@ -48,22 +50,30 @@ export default function Header() {
         })
     })
 
-    const showList = () => {
-        if (window.screen.width <= 1000) {
-            list.current.classList.remove(styles.clickIconRemove)
-            list.current.classList.add(styles.clickIcon)
+    const toggleList = () => {
+        if (window.screen.width <= 1200) {
+            if (list.current.classList.contains(styles.clickIcon)){
+                list.current.classList.remove(styles.clickIcon)
+                list.current.classList.add(styles.clickIconRemove)
+            }
+            else{
+                list.current.classList.add(styles.clickIcon);
+                list.current.classList.remove(styles.clickIconRemove);
+            }
 
-            showListIcon.current.style.display = 'none'
+            // showListIcon.current.style.visibility = 'hidden'
         }
     }
 
     const removeList = () => {
-        if (window.screen.width <= 1000) {
-            showListIcon.current.style.display = 'inline-block'
+        if (window.screen.width <= 1200) {
+            // showListIcon.current.style.visibility = "visible";
             list.current.classList.remove(styles.clickIcon)
             list.current.classList.add(styles.clickIconRemove)
         }
     }
+
+    const { t } = useTranslation()
 
 
     return (
@@ -71,8 +81,12 @@ export default function Header() {
 
             <Logo />
 
+            <div className={styles.selectLanguageOnSmallScreen}>
+                <SelectLanguage />
+            </div>
+
             <div>
-                <div className={styles.iconResponsive} onClick={showList} ref={showListIcon}>
+                <div className={styles.iconResponsive} onClick={toggleList} ref={showListIcon}>
                     <div className={styles.icon}></div>
                 </div>
 
@@ -83,29 +97,42 @@ export default function Header() {
                         </div>
                     </div>
                     <div className={`home-nav ${styles.active}`}>
-                        <a href="#home"><span>H </span><span>O </span><span>M </span><span>E</span></a>
+                        <a href="#home">
+                            {t("home").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        </a>
                     </div>
 
                     <div className='about-nav'>
-                        <a href="#about"><span>A </span><span>B </span><span>O </span><span>U </span><span>T</span></a>
+                        <a href="#about">
+                            {t("about").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        </a>
                     </div>
 
                     <div className='skills-nav'>
-                        <a href="#skills"><span>S </span><span>K </span><span>I </span><span>L </span><span>L </span><span>S</span></a>
+                        <a href="#skills">
+                            {t("skills").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        </a>
                     </div>
 
                     <div className='projects-nav'>
-                        <a href="#projects"><span>P </span><span>R </span><span>O </span><span>J </span><span>E </span><span>C </span><span>T </span><span>S</span></a>
+                        <a href="#projects">
+                            {t("projects").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        </a>
                     </div>
 
                     <div className='contact-nav'>
-                        <a href="#contact"><span>C </span><span>O </span><span>N </span><span>T </span><span>A </span><span>C </span><span>T</span></a>
+                        <a href="#contact">
+                            {t("contact").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        </a>
                     </div>
                 </div>
 
 
             </div>
 
+        	<div className={styles.selectLanguageOnLargeScreen}>
+                <SelectLanguage />
+            </div>
 
         </div>
     );

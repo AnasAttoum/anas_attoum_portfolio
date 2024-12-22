@@ -4,11 +4,16 @@
     width: 100vw;
     height: 80px;
     display: flex;
+    align-items: center;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
 
     z-index: 1000;
+}
+
+.selectLanguageOnSmallScreen{
+    display: none;
 }
 
 
@@ -73,7 +78,7 @@
 
     color: var(--mainColor);
 
-    animation: rightActive 1s forwards;
+    animation: rightActive 1.2s forwards;
 }
 
 @keyframes rightActive {
@@ -83,7 +88,7 @@
 }
 
 .active a span {
-    animation: colorChange 1s forwards;
+    animation: colorChange 1.2s forwards;
 
 }
 
@@ -119,6 +124,18 @@
     animation-delay: .8s;
 }
 
+.active a span:nth-child(9) {
+    animation-delay: .9s;
+}
+
+.active a span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.active a span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
 @keyframes colorChange {
     100% {
         color: var(--mainColor);
@@ -128,7 +145,7 @@
 
 
 .listHeader:hover>div a {
-    transition: all 1s;
+    transition: all 1.2s;
 }
 
 .listHeader>div a:hover span:nth-child(1) {
@@ -163,6 +180,18 @@
     transition-delay: .8s;
 }
 
+.listHeader>div a:hover span:nth-child(9) {
+    transition-delay: .9s;
+}
+
+.listHeader>div a:hover span:nth-child(10) {
+    transition-delay: 1s;
+}
+
+.listHeader>div a:hover span:nth-child(11) {
+    transition-delay: 1.1s;
+}
+
 .listHeader>div a:hover {
     color: var(--mainColor);
 }
@@ -171,7 +200,7 @@
 
 
 
-@media (max-width:1000px) {
+@media (max-width:1200px) {
     .header {
         width: 100%;
         justify-content: flex-end;
@@ -240,9 +269,10 @@
 
         display: inline-block;
 
-        padding: 24px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 20px;
+        /* padding-left: 50px; */
+        /* padding-right: 50px; */
+        /* padding-right: 20px; */
     }
 
     .icon {
@@ -367,6 +397,12 @@
         text-shadow: 0px 0px 3px white;
     }
 
+    .selectLanguageOnLargeScreen{
+        display: none;
+    }
+    .selectLanguageOnSmallScreen{
+        display: block;
+    }
 
 }
 
@@ -386,10 +422,10 @@
     }
 }
 
-@media (max-width:555px) {
+/* @media (max-width:555px) {
 
     .iconResponsive {
         padding-left: 50px;
         padding-right: 20px;
     }
-}
+} */

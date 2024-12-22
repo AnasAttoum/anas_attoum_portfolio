@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { skillsData } from "../data/data";
 import styles from '../styles/skills.module.css';
 import CardSkill from "../components/CardSkill";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
     const { ref: section, inView: section_IsInView } = useInView()
@@ -26,11 +27,13 @@ export default function Skills() {
         titleEntry
     ])
 
+    const { t } = useTranslation()
+
     return (
         <>
             <span id="skills" style={{ paddingTop: '25px',visibility:"hidden"}}>skills</span>
             <section id="skills2" className={styles.skills} ref={section}>
-                <div className={styles.titleSkills} ref={title}>What I Love</div>
+                <div className={styles.titleSkills} ref={title}>{t("love")}</div>
 
                 <div className={styles.containerSkills} ref={cardSkill}>
 

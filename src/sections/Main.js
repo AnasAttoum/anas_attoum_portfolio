@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom'
 
 import styles from '../styles/main.module.css';
+import { useTranslation } from "react-i18next";
 
 export default function Main() {
 
@@ -12,7 +13,7 @@ export default function Main() {
     const { ref: p3, inView: p3_IsInView, entry: p3Entry } = useInView()
     const { ref: pic, inView: pic_IsInView, entry: picEntry } = useInView()
 
-
+    const { t } = useTranslation()
 
     useEffect(() => {
         if (section_IsInView) {
@@ -44,13 +45,13 @@ export default function Main() {
                 <div className={styles.intro}>
 
                     <p ref={p1}>
-                        Hi, I’m <span style={{ color: 'var(--mainColor)', fontWeight: '600' }}>Anas Attoum</span> <br />
-                        A Front-End Web Developer
+                        {t("hi")} <span style={{ color: 'var(--mainColor)', fontWeight: '600' }}>Anas Attoum</span> <br />
+                        {t("frontEndDev")}
                     </p>
 
-                    <p className={styles.endIntro} ref={p2}>Let’s Work Together</p>
+                    <p className={styles.endIntro} ref={p2}>{t("letsWorkTogether")}</p>
 
-                    <a href={process.env.PUBLIC_URL + '/Anas_Attoum_CV.pdf'} download='Anas_Attoum_CV.pdf' className={styles.downloadCV} ref={p3}>Download CV</a>
+                    <a href={process.env.PUBLIC_URL + '/Anas_Attoum_CV.pdf'} download='Anas_Attoum_CV.pdf' className={styles.downloadCV} ref={p3}>{t("downloadCV")}</a>
 
                 </div>
 

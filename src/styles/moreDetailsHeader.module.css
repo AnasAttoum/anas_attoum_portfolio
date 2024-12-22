@@ -114,6 +114,14 @@
         display: flex;
         justify-content: flex-end;
     }
+    .buttons {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 20%;
+        position: relative;
+        right: 10px;
+        height: 100%;
+    }
 }
 
 @media (max-width:750px) {
@@ -152,14 +160,6 @@
 @media (max-width:425px) {
     .title {
         left: 0px;
-    }
-    .buttons {
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 20%;
-        position: relative;
-        right: 10px;
-        height: 100%;
     }
 
     .buttons>div>a {

@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { projectsData } from "../data/data";
 import styles from '../styles/projects.module.css';
 import CardProject from "../components/CardProject";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
 
@@ -71,19 +72,20 @@ export default function Projects() {
         }, 1)
     }
 
+    const { t } = useTranslation()
 
     return (
         <>
             <span id="projects" style={{ paddingTop: '55px', visibility: "hidden" }}>projects</span>
             <section id="projects2" className={styles.projects} ref={section}>
-                <div className={styles.titleProjects} ref={title}>What I Did</div>
+                <div className={styles.titleProjects} ref={title}>{t("did")}</div>
 
                 <div className={styles.categories} ref={categories} onClick={changeCat}>
-                    <div id="all">All</div>
-                    <div id="project">Projects</div>
-                    <div id="page">Pages</div>
-                    <div id="game">Games</div>
-                    <div id="component">Components</div>
+                    <div id="all">{t("all")}</div>
+                    <div id="project">{t("projects")}</div>
+                    <div id="page">{t("pages")}</div>
+                    <div id="game">{t("games")}</div>
+                    <div id="component">{t("components")}</div>
                 </div>
 
                 <div className={styles.containerProjects} ref={cardProjects}>

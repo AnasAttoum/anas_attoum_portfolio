@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser'
 
 import styles from '../styles/contact.module.css';
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Contact() {
     const { ref: section, inView: section_IsInView } = useInView()
@@ -29,19 +30,23 @@ export default function Contact() {
         });
     }
 
+    const { t } = useTranslation()
+
     return (
         <>
             <span id="contact" style={{ visibility:"hidden" }}>contact</span>
             <section id="contact2" className={styles.contact} ref={section}>
-                <div className={styles.titleContact} ref={title}>Contact Me</div>
+                <div className={styles.titleContact} ref={title}>{t("contactMe")}</div>
 
                 <div className={styles.containerContact}>
 
                     <div className={styles.leftContact}>
                         <div className={styles.backdrop}>
-                            <h3>Let’s Connect!<br />
-                                and make something amazing together</h3>
-                            <h6>I’m currently looking for new opportunities, whether it’s a part-time of full-time position, my inbox is always open.<br /> Drop me a message!
+                            <h3>
+                                <Trans i18nKey="letsConnect" components={{ br: <br /> }} />
+                            </h3>
+                            <h6>
+                                <Trans i18nKey="dropMessage" components={{ br: <br /> }} />
                             </h6>
                             <div className={styles.icons}>
                                 <Link to={'https://github.com/AnasAttoum'} target="_blank" className={styles.link}><div></div></Link>
@@ -49,7 +54,7 @@ export default function Contact() {
                                 <Link to={'mailto:AnasAttoum.12321@gmail.com'} target="_blank" className={styles.link}><div></div></Link>
                                 <Link to={'tel:+963951-931-846'} target="_blank" className={styles.link}><div></div></Link>
                             </div>
-                            <p>Code with ❤️</p>
+                            <p>{t("codeWith")}</p>
                         </div>
 
                         <div className={styles.circle}></div>
@@ -61,20 +66,28 @@ export default function Contact() {
 
                     <div className={styles.rightContact}>
                         <form onSubmit={sendEmail}>
-                            <label htmlFor="name">N a m e</label>
+                            <label htmlFor="name">
+                                {t("name").split("").map((char)=>{return <span>{char} </span>;})}
+                            </label>
                             <input type="text" id="name" name="name" /><br/>
 
                             {/* <label htmlFor="number">N u m b e r</label>
                             <input type="number" id="number" name="number" /><br/> */}
 
-                            <label htmlFor="number">E m a i l</label>
+                            <label htmlFor="number">
+                                {t("email").split("").map((char)=>{return <span>{char} </span>;})}
+                            </label>
                             <input type="email" id="email" name="email" /><br/>
 
-                            <label htmlFor="message">M e s s a g e</label>
+                            <label htmlFor="message">
+                                {t("message").split("").map((char)=>{return <span>{char} </span>;})}
+                            </label>
                             <textarea id="message" name="message" rows="5"></textarea>
 
                             <div>
-                                <button>S u b m i t</button>
+                                <button>
+                                    {t("submit")}
+                                </button>
                             </div>
                         </form>
                     </div>

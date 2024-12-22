@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import styles from '../styles/about.module.css';
+import { useTranslation } from "react-i18next";
 
 export default function About() {
     const { ref: section, inView: section_IsInView } = useInView()
@@ -26,6 +27,7 @@ export default function About() {
         p1Entry, p2Entry, picEntry
     ])
 
+    const { t } = useTranslation()
 
     return (
         <>
@@ -39,14 +41,10 @@ export default function About() {
 
 
                     <p ref={p1}>
-                        A Bit About Me
+                        {t("bit")}
                     </p>
                     <p ref={p2}>
-                        I have always been amazed at how web sites interface are made, That is what got me into learning Front-End
-                        development so i started working on web design using Figma after that I focused on mastering ReactJS to convert
-                        designs to reality, so it would become an actual interactive web pages.
-                        As an IT-Engineer i believe that leaning AI and machine learning will open doors to make our websites more
-                        dynamic and interactive.
+                        {t("aboutMe")}
                     </p>
 
 

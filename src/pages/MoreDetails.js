@@ -7,6 +7,7 @@ import styles from '../styles/moreDetailsPage.module.css'
 import MoreDetailsHeader from "../components/MoreDetailsHeader";
 import MoreDetailsAboutProject from "../sections/MoreDetailsAboutProject";
 import MoreDetailsVideo from "../sections/MoreDetailsVideo";
+import { useTranslation } from "react-i18next";
 
 export default function MoreDetailsPage() {
 
@@ -47,13 +48,14 @@ export default function MoreDetailsPage() {
         document.title = 'Anas Attoum | ' + project.normalName
     }, [project.normalName])
 
+    const { t } = useTranslation()
 
     return (
         <>
             <MoreDetailsHeader title={project.title} codeURL={project.codeURL} demoURL={project.demoURL} />
 
             <div className={styles.title} ref={title}>
-                Overview
+                {t("overview")}
             </div>
 
             <div className={styles.image} style={{ backgroundImage: project.mockup }} ref={image}></div>

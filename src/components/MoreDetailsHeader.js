@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import Logo from './Logo';
 import styles from '../styles/moreDetailsHeader.module.css';
+import SelectLanguage from './SelectLanguage';
 
 export default function MoreDetailsHeader(props) {
 
@@ -29,6 +31,7 @@ export default function MoreDetailsHeader(props) {
         prevScrollpos = currentScrollPos;
     }
     
+    const { t } = useTranslation();
 
     return (
         <div ref={MoreDetailsHeader} className={styles.header}>
@@ -41,14 +44,20 @@ export default function MoreDetailsHeader(props) {
 
             <p className={styles.title} ref={title}></p>
 
+
             <div className={styles.buttons}>
                 {props.codeURL!==''? <div>
-                    <Link to={props.codeURL} target="_blank"><span>C </span><span>O </span><span>D </span><span>E</span></Link>
+                    <Link to={props.codeURL} target="_blank">
+                        {t("code").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                    </Link>
                 </div>:null}
 
                 {props.demoURL!==''? <div>
-                    <Link to={props.demoURL} target="_blank"><span>D </span><span>E </span><span>M </span><span>O</span></Link>
+                    <Link to={props.demoURL} target="_blank">
+                        {t("demo").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                    </Link>
                 </div>:null}
+            <SelectLanguage />
             </div>
 
         </div>

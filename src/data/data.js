@@ -87,7 +87,7 @@ export const projectsData = [
     demoURL: "https://chic-haven.vercel.app/",
     mockup: "url(/images/projects/chicHaven/chicHavenMockup.png)",
     logo: "url(/images/projects/chicHaven/chicHavenLogo.png)",
-    text: "Chic Haven is a curated platform offering a seamless shopping experience for modern consumers who value quality and aesthetics. With an emphasis on elegant design and user-friendly functionality.",
+    text: "chicHavenText",
     madeWith: [
       "Next.js",
       "NextAuth.js",
@@ -97,7 +97,8 @@ export const projectsData = [
       "axios",
       "MUI",
     ],
-    video: "https://drive.google.com/file/d/1yr4NVz8OtjjdqGC0qJlu833aGXTOBxdY/preview",
+    video:
+      "https://drive.google.com/file/d/1yr4NVz8OtjjdqGC0qJlu833aGXTOBxdY/preview",
   },
   {
     name: "TrueSkin",
@@ -109,7 +110,7 @@ export const projectsData = [
     demoURL: "https://true-skin.vercel.app/",
     mockup: "url(/images/projects/trueSkin/trueSkinMockup.png)",
     logo: "url(/images/projects/trueSkin/trueSkinLogo.png)",
-    text: "True Skin is more than just an online store, it’s a comprehensive solution that bridges the gap between product availability and customer needs.<br />By focusing on user experience and offering a robust dashboard for sellers.<br/>Admin account:<br/>Email: admin@trueskin.com<br/>Password: 12345",
+    text: "trueSkinText",
     madeWith: [
       "React.js",
       "Vite",
@@ -133,7 +134,7 @@ export const projectsData = [
     demoURL: "https://budget-lab-24.vercel.app",
     mockup: "url(/images/projects/budgetLab/budgetLabMockup.png)",
     logo: "url(/images/projects/budgetLab/budgetLabLogo.png)",
-    text: "Budget Lab is a personal budget management website designed to help users take control of their finances.<br/>This project designed while training at Prokoders Company.",
+    text: "budgetLabText",
     madeWith: [
       "React.js",
       "Vite",
@@ -157,7 +158,7 @@ export const projectsData = [
     demoURL: "https://dashlink-mobile.vercel.app/",
     mockup: "url(/images/projects/dashLinkMobile/dashLinkMobileMockup.png)",
     logo: "url(/images/projects/dashLinkMobile/dashLinkMobileLogo.png)",
-    text: "DashLink Mobile is a state-of-the-art and user-friendly dashboard, It’s designed as a content management system for a mobile company.<br/>This project designed while training at Prokoders Company.<br/>Admin account:<br/>Username: admin<br/>Password: 012345",
+    text: "dashLinkMobileText",
     madeWith: ["React.js", "Redux", "JavaScript", "Tailwindcss", "MUI", "CSS"],
     video:
       "https://drive.google.com/file/d/1CSk_wrUoSkMPbDfHvVAxHIStm2wXtcWe/preview",
@@ -172,7 +173,7 @@ export const projectsData = [
     demoURL: "https://book-nook-24.vercel.app/",
     mockup: "url(/images/projects/bookNook/bookNookMockup.png)",
     logo: "url(/images/projects/bookNook/bookNookLogo.png)",
-    text: "Book Nook is a website for borrowing books, This website designed while training at Prokoders Company.<br/>Find the book you’re looking for and keep the story going...",
+    text: "bookNookText",
     madeWith: ["React.js", "Redux", "JavaScript", "Tailwindcss", "MUI", "CSS"],
     video:
       "https://drive.google.com/file/d/16EnQCr3iqIvuSQzlv33QGJn--2lKzF0P/preview",
@@ -187,7 +188,7 @@ export const projectsData = [
     demoURL: "https://anasattoum.github.io/Flip_Zone/",
     mockup: "url(/images/projects/flipZone/flipZoneMockup.png)",
     logo: "url(/images/projects/flipZone/flipZoneLogo.png)",
-    text: "Flip Zone is a flipping cards guessing game,This page designed while training at Prokoders Company.<br/>Let’s Have some fun.",
+    text: "flipZoneText",
     madeWith: ["HTML", "CSS", "JavaScript", "Tailwindcss"],
     video:
       "https://drive.google.com/file/d/1CYQG7MondInGcQmTnzhFHPlbURmny4k8/preview",
@@ -202,7 +203,7 @@ export const projectsData = [
     demoURL: "https://anasattoum.github.io/ULearn/",
     mockup: "url(/images/projects/uLearn/uLearnMockup.png)",
     logo: "url(/images/projects/uLearn/uLearnLogo.png)",
-    text: "ULearn offers an innovative and engaging page for learners around the world.<br/>This page designed while training at Prokoders Company.",
+    text: "uLearnText",
     madeWith: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     video:
       "https://drive.google.com/file/d/1Cc6DqfMpXLB6nC3WtTQT0MYnRRiqcOcr/preview",
@@ -217,7 +218,7 @@ export const projectsData = [
     demoURL: "https://techno-shop-24.vercel.app/",
     mockup: "url(/images/projects/technoShop/technoShopMockup.png)",
     logo: "url(/images/projects/technoShop/technoShopLogo.png)",
-    text: "Techno Shop is dedicated to buy laptops and tablets.<br/>Built on Next.js, our website is faster, more reliable, and boasts an impressive user interface.",
+    text: "technoShopText",
     madeWith: ["Next.js", "Redux", "TypeScript", "Tailwindcss", "MUI", "CSS"],
     video:
       "https://drive.google.com/file/d/1OCqWkYlMXkNByt4JYUm3jadFi-2SQ1FH/preview",
@@ -232,7 +233,7 @@ export const projectsData = [
     demoURL: "https://fashion-com-24.vercel.app/",
     mockup: "url(/images/projects/fashionCOM/fashionCOMMockup.png)",
     logo: "url(/images/projects/fashionCOM/fashionCOMLogo.png)",
-    text: "Fashion COM an online shopping website for clothes.<br/>It’s convenient, fast and easy to use.",
+    text: "fashionCOMText",
     madeWith: [
       "React.js",
       "Redux",
@@ -255,7 +256,7 @@ export const projectsData = [
     demoURL: "https://anasattoum.github.io/Our_Journey_Blog/",
     mockup: "url(/images/projects/ourJourneyBlog/ourJourneyBlogMockup.png)",
     logo: "url(/images/projects/ourJourneyBlog/ourJourneyBlogLogo.png)",
-    text: "This is my Simple Project while training at Darrebni Company.<br/>The idea of the project is a blog website page for a bloger to share his stories.",
+    text: "ourJourneyBlogText",
     madeWith: ["HTML", "CSS", "JavaScript"],
     video:
       "https://drive.google.com/file/d/1uowmld_oiLe2y3qog4pvLArRHIBhWOuw/preview",
@@ -270,7 +271,7 @@ export const projectsData = [
     demoURL: "https://anasattoum.github.io/Cupcakes_Cards_Component/",
     mockup: "url(/images/projects/cupcakesCards/cupcakesCardsMockup.png)",
     logo: "url(/images/projects/cupcakesCards/cupcakesCardsLogo.png)",
-    text: "This is a component design that can be used in any project. <br/> it’s a card design, can be useful for categories, infos and products with a cool hover effect.",
+    text: "cupcakesCardsText",
     madeWith: ["HTML", "CSS"],
     video:
       "https://drive.google.com/file/d/1C7MznTWaku0W40cgBtLM7uMtXbe2ZpZL/preview",
@@ -285,7 +286,7 @@ export const projectsData = [
     demoURL: "https://findworkwithme.web.app/",
     mockup: "url(/images/projects/findWorkWithMe/findWorkWithMeMockup.png)",
     logo: "url(/images/projects/findWorkWithMe/findWorkWithMeLogo.png)",
-    text: "This was my first project as a React developer that i made at my fourth year (2022) in college.<br/>The idea is to create an interactive website for people and freelancer to help each of them find what they’re looking for.",
+    text: "findWorkWithMeText",
     madeWith: ["React.js", "Firebase", "CSS", "MaterialUI", "Grommet"],
     video:
       "https://drive.google.com/file/d/1iDGBHoBhlQ24JBeZ5baKk0i-GZYZUHBu/preview",

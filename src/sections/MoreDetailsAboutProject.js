@@ -3,17 +3,19 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 
 import styles from '../styles/moreDetailsAboutProject.module.css';
+import { useTranslation } from 'react-i18next';
 
 export default function MoreDetailsAboutProject(props) {
 
     const {ref:About , inView:aboutInView , entry:aboutEntry} = useInView()
     const text = useRef()
+    const { t } = useTranslation()
 
     useEffect(()=>{
         if(props.text){
-            text.current.innerHTML=props.text
+            text.current.innerHTML = t(props.text)
         }
-    },[props.text])
+    },[props.text, t])
 
     useEffect(()=>{
 
