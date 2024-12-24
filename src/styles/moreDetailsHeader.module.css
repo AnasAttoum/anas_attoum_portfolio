@@ -158,9 +158,9 @@
 }
 
 @media (max-width:425px) {
-    .title {
-        left: 0px;
-    }
+    /* .title { */
+        /* left: 0px; */
+    /* } */
 
     .buttons>div>a {
         font-size: 3vw;

@@ -133,8 +133,9 @@ body::-webkit-scrollbar-thumb {
 
 .letterSpacingAnimation {
     opacity: 0;
-    letter-spacing: 20px;
     animation: letterSpacingAnimation .5s linear forwards;
+    letter-spacing: 20px;
+    min-width: max-content;
 }
 
 @keyframes letterSpacingAnimation {

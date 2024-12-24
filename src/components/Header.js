@@ -50,6 +50,13 @@ export default function Header() {
         })
     })
 
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }, []);
+
     const toggleList = () => {
         if (window.screen.width <= 1200) {
             if (list.current.classList.contains(styles.clickIcon)){
@@ -98,31 +105,31 @@ export default function Header() {
                     </div>
                     <div className={`home-nav ${styles.active}`}>
                         <a href="#home">
-                            {t("home").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                            {t("home").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                         </a>
                     </div>
 
                     <div className='about-nav'>
                         <a href="#about">
-                            {t("about").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                            {t("about").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                         </a>
                     </div>
 
                     <div className='skills-nav'>
                         <a href="#skills">
-                            {t("skills").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                            {t("skills").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                         </a>
                     </div>
 
                     <div className='projects-nav'>
                         <a href="#projects">
-                            {t("projects").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                            {t("projects").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                         </a>
                     </div>
 
                     <div className='contact-nav'>
                         <a href="#contact">
-                            {t("contact").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                            {t("contact").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                         </a>
                     </div>
                 </div>

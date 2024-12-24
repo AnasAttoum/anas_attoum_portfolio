@@ -5,7 +5,7 @@ import cookies from "js-cookie";
 import styles from "../styles/selectLanguage.module.css";
 import i18next from "i18next";
 
-export default function SelectLanguage() {
+export default function SelectLanguage({top=80}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
@@ -34,7 +34,7 @@ export default function SelectLanguage() {
         ></span>
       </div>
 
-      <div className={styles.languagesList} style={isOpen?{}:{display:'none'}}>
+      <div className={styles.languagesList} style={isOpen?{ top:top }:{ display:'none', top:`${top}px` }}>
       {isOpen && (
           languages.map(({ code, name, country_code }) => {
             return (

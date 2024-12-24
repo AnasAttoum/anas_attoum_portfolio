@@ -3,9 +3,8 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
-import Logo from './Logo';
 import styles from '../styles/moreDetailsHeader.module.css';
-import SelectLanguage from './SelectLanguage';
+import Logo from './Logo';
 
 export default function MoreDetailsHeader(props) {
 
@@ -48,16 +47,15 @@ export default function MoreDetailsHeader(props) {
             <div className={styles.buttons}>
                 {props.codeURL!==''? <div>
                     <Link to={props.codeURL} target="_blank">
-                        {t("code").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        {t("code").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                     </Link>
                 </div>:null}
 
                 {props.demoURL!==''? <div>
                     <Link to={props.demoURL} target="_blank">
-                        {t("demo").toUpperCase().split("").map((char)=>{return <span>{char} </span>;})}
+                        {t("demo").toUpperCase().split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                     </Link>
                 </div>:null}
-            <SelectLanguage />
             </div>
 
         </div>
