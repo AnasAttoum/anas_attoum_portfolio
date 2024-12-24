@@ -23,7 +23,12 @@ export default function Contact() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_o1gv52m', 'template_1fs9jbt', e.target, 'ohOS6QlC-qLfiY2AG')
+        emailjs.sendForm(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          e.target,
+          process.env.REACT_APP_PUBLIC_KEY
+        );
 
         e.target.childNodes.forEach(element => {
             element.value = ''
@@ -67,7 +72,7 @@ export default function Contact() {
                     <div className={styles.rightContact}>
                         <form onSubmit={sendEmail}>
                             <label htmlFor="name">
-                                {t("name").split("").map((char)=>{return <span>{char} </span>;})}
+                                {t("name").split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                             </label>
                             <input type="text" id="name" name="name" /><br/>
 
@@ -75,12 +80,12 @@ export default function Contact() {
                             <input type="number" id="number" name="number" /><br/> */}
 
                             <label htmlFor="number">
-                                {t("email").split("").map((char)=>{return <span>{char} </span>;})}
+                                {t("email").split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                             </label>
                             <input type="email" id="email" name="email" /><br/>
 
                             <label htmlFor="message">
-                                {t("message").split("").map((char)=>{return <span>{char} </span>;})}
+                                {t("message").split("").map((char, index)=>{return <span key={index}>{char} </span>;})}
                             </label>
                             <textarea id="message" name="message" rows="5"></textarea>
 
