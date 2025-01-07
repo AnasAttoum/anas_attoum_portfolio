@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondColor);
+    background-color: var(--mainColor);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
     gap: 25px;
 }

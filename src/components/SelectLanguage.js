@@ -9,10 +9,11 @@ export default function SelectLanguage({top=80}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
+  const lang = cookies.get("i18next") || "en";
   useEffect(() => {
-    const currentLanguageCode = cookies.get("i18next") || "en";
+    const currentLanguageCode = lang;
     if (currentLanguageCode) setSelectedLanguage(currentLanguageCode);
-  }, []);
+  }, [lang]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
