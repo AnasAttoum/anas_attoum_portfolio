@@ -63,6 +63,7 @@
     text-wrap: nowrap;
     writing-mode: vertical-lr;
     font-size: 8px;
+    overflow: hidden;
     padding: 3px;
     font-weight: 900;
     color: white;
