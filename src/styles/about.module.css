@@ -27,7 +27,8 @@
     width: 20vw;
     height: 20vw;
 
-    border: 7px solid #E5DBF6;
+    /* border: 7px solid #E5DBF6; */
+    border: 7px solid var(--secondColor);
     border-radius: 30px;
 
     position: relative;

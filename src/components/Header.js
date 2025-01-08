@@ -4,6 +4,7 @@ import styles from '../styles/header.module.css';
 import Logo from "./Logo";
 import SelectLanguage from "./SelectLanguage";
 import { useTranslation } from "react-i18next";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Header() {
     const header = useRef();
@@ -89,6 +90,7 @@ export default function Header() {
             <Logo />
 
             <div className={styles.selectLanguageOnSmallScreen}>
+                <DarkModeToggle />
                 <SelectLanguage />
             </div>
 
@@ -137,10 +139,10 @@ export default function Header() {
 
             </div>
 
-        	<div className={styles.selectLanguageOnLargeScreen}>
+            <div className={styles.selectLanguageOnLargeScreen}>
+                <DarkModeToggle />
                 <SelectLanguage />
             </div>
-
-        </div>
+            </div>
     );
 }

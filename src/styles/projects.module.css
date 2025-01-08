@@ -22,7 +22,6 @@
     font-size: 20px;
     cursor: pointer;
     padding: 5px;
-    color: #222;
     transition: all .3s;
 }
 .active{

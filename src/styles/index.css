@@ -1,3 +1,5 @@
+@import "https://cssicon.space/css/icons.css";
+
 :root {
     --mainColor: #a886e4;
     --mainColorOpacity: rgba(0, 0, 0, 0.6);
@@ -11,6 +13,8 @@
     /* --secondColor: rgba(128, 183, 126, 0.75); */
     /* --secondColor: rgba(138, 131, 182, 0.75); */
     --subText: #939393;
+    --color: #111;
+    --background: #eee;
 }
 
 * {
@@ -26,7 +30,7 @@ body {
 }
 /* Scrollbar */
 body {
-    --sb-thumb-color: #a886e4;
+  --sb-thumb-color: #a886e4;
   --sb-track-color: #232e33bc;
   --sb-size: 14px;
 }
@@ -50,6 +54,26 @@ body::-webkit-scrollbar-thumb {
       scrollbar-color: var(--sb-thumb-color)
                      var(--sb-track-color);
   }
+}
+
+.theme {
+  transition: all .5s;
+}
+
+.light {
+  color: var(--color);
+  background: var(--background);
+}
+
+.dark {
+  color: var(--background);
+  background: var(--color);
+}
+
+.iconContainer{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 /*                                              Loading                                           */

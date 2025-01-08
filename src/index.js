@@ -10,6 +10,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import Loading from './pages/Loading';
+import ThemeProvider from './context/themeProvider';
 
 i18n
   .use(initReactI18next)
@@ -31,7 +32,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Suspense fallback={<Loading />}>
     <React.StrictMode>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </React.StrictMode>
   </Suspense>
 );

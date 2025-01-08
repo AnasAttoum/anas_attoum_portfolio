@@ -10,8 +10,9 @@
 
 .languagesList{
     position: absolute;
-    transform: translateX(-15px);
+    transform: translateX(-20px);
     background-color: #ddd;
+    color: var(--color);
     border-radius: 5px;
 }
 
