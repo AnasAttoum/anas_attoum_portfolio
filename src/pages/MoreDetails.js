@@ -3,7 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { useParams } from 'react-router-dom';
 
 import { projectsData } from "../data/data"; 
-import styles from '../styles/moreDetailsPage.module.css'
+import styles from '../styles/moreDetailsPage.module.css';
+import logo from "../styles/logo.module.css";
 import MoreDetailsHeader from "../components/MoreDetailsHeader";
 import MoreDetailsAboutProject from "../sections/MoreDetailsAboutProject";
 import MoreDetailsVideo from "../sections/MoreDetailsVideo";
@@ -17,7 +18,7 @@ export default function MoreDetailsPage() {
 
 
     useEffect(() => {
-        setProject(projectsData.find(element => { return element.name === param.projectName }))
+        setProject(projectsData.find(element => { return element.name.toLowerCase() === param.projectName.toLowerCase(); }))
     }, [param.projectName])
 
 
@@ -45,33 +46,70 @@ export default function MoreDetailsPage() {
     ])
 
     useEffect(() => {
-        document.title = 'Anas Attoum | ' + project.normalName
-    }, [project.normalName])
+        document.title = 'Anas Attoum | ' + (project?.normalName || 'Not Found')
+    }, [project?.normalName])
 
     const { t } = useTranslation()
 
     return (
-        <>
-            <MoreDetailsHeader title={project.title} codeURL={project.codeURL} demoURL={project.demoURL} />
+      <>
+        {project === undefined ? (
+            <div style={{display:'flex', flexDirection:'column', gap:'50px', justifyContent:'center', alignItems:'center',minHeight:'100vh'}}>
+              <MoreDetailsHeader
+                title={"404"}
+                codeURL={""}
+                demoURL={""}
+              />
+            <div>
+                <div className={logo.logo}>
+                <div className={logo.left}>
+                    <div className={logo.mid}></div>
+                </div>
+                <div className={logo.right}>Anas Attoum</div>
+                </div>
+            </div>
+            <h3>Project Not Found</h3>
+          </div>
+        ) : (
+          <>
+            <MoreDetailsHeader
+              title={project.title}
+              codeURL={project.codeURL}
+              demoURL={project.demoURL}
+            />
 
             <div className={styles.title} ref={title}>
-                {t("overview")}
+              {t("overview")}
             </div>
 
-            <div className={styles.image} style={{ backgroundImage: project.mockup }} ref={image}></div>
+            <div
+              className={styles.image}
+              style={{ backgroundImage: project.mockup }}
+              ref={image}
+            ></div>
 
-            <div style={{display:'flex',justifyContent:'center'}}>
-                <div className={styles.madeWithContainer} ref={madeWith}>
-                    {(project.madeWith) ? project.madeWith.map((value, index) => {
-                        return <div className={styles.madeWith} key={index}>{value}</div>
-                    }) : null}
-                </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div className={styles.madeWithContainer} ref={madeWith}>
+                {project.madeWith
+                  ? project.madeWith.map((value, index) => {
+                      return (
+                        <div className={styles.madeWith} key={index}>
+                          {value}
+                        </div>
+                      );
+                    })
+                  : null}
+              </div>
             </div>
 
             <MoreDetailsAboutProject logo={project.logo} text={project.text} />
 
-
-            <MoreDetailsVideo video={project.video} normalName={project.normalName} />
-        </>
+            <MoreDetailsVideo
+              video={project.video}
+              normalName={project.normalName}
+            />
+          </>
+        )}
+      </>
     );
 }

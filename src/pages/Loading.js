@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import styles from '../styles/logo.module.css';
 
 export default function Loading() {
+
+  useEffect(() => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'instant'
+      })
+  }, [])
+
   return (
     <div style={{display:'flex', flexDirection:'column', gap:'50px', justifyContent:'center', alignItems:'center',minHeight:'100vh'}}>
       <div>
