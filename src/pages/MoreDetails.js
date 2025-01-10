@@ -4,11 +4,11 @@ import { useParams } from 'react-router-dom';
 
 import { projectsData } from "../data/data"; 
 import styles from '../styles/moreDetailsPage.module.css';
-import logo from "../styles/logo.module.css";
 import MoreDetailsHeader from "../components/MoreDetailsHeader";
 import MoreDetailsAboutProject from "../sections/MoreDetailsAboutProject";
 import MoreDetailsVideo from "../sections/MoreDetailsVideo";
 import { useTranslation } from "react-i18next";
+import NotFound from "./NotFound";
 
 export default function MoreDetailsPage() {
 
@@ -54,22 +54,7 @@ export default function MoreDetailsPage() {
     return (
       <>
         {project === undefined ? (
-            <div style={{display:'flex', flexDirection:'column', gap:'50px', justifyContent:'center', alignItems:'center',minHeight:'100vh'}}>
-              <MoreDetailsHeader
-                title={"404"}
-                codeURL={""}
-                demoURL={""}
-              />
-            <div>
-                <div className={logo.logo}>
-                <div className={logo.left}>
-                    <div className={logo.mid}></div>
-                </div>
-                <div className={logo.right}>Anas Attoum</div>
-                </div>
-            </div>
-            <h3>Project Not Found</h3>
-          </div>
+            <NotFound />
         ) : (
           <>
             <MoreDetailsHeader
