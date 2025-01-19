@@ -68,12 +68,19 @@ body::-webkit-scrollbar-thumb {
 .dark {
   color: var(--background);
   background: var(--color);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .iconContainer{
     width: 20px;
     height: 20px;
     cursor: pointer;
+}
+.iconContainer:focus,
+.iconContainer:active {
+  background-color: transparent; 
+  outline: none; 
 }
 
 /*                                              Loading                                           */
