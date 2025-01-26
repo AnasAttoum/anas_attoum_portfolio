@@ -51,7 +51,8 @@ export default function Main() {
 
                     <p className={styles.endIntro} ref={p2}>{t("letsWorkTogether")}</p>
 
-                    <a href={process.env.PUBLIC_URL + '/Anas_Attoum_CV.pdf'} download='Anas_Attoum_CV.pdf' className={styles.downloadCV} ref={p3}>{t("downloadCV")}</a>
+                    {/* <a href={process.env.PUBLIC_URL + '/Anas_Attoum_CV.pdf'} download='Anas_Attoum_CV.pdf' className={styles.downloadCV} ref={p3}>{t("downloadCV")}</a> */}
+                    <a href="https://drive.google.com/file/d/1B4xQ9jc5EQa4NA9YpPLpz-vFqYE62ivw/preview" target="_blank" rel="noreferrer" className={styles.downloadCV} ref={p3}>{t("showCV")}</a>
 
                 </div>
 

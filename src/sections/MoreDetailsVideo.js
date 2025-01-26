@@ -17,7 +17,7 @@ export default function MoreDetailsVideo(props) {
     useEffect(() => {
         if (videoInView) {
             videoEntry.target.className += ' opacityAnimation'
-            videoEntry.target.style.animationDelay = '1.5s'
+            videoEntry.target.style.animationDelay = '.5s'
 
         }
     }, [
