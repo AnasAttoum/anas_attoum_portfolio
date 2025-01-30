@@ -91,7 +91,7 @@ export default function Header() {
 
             <div className={styles.selectLanguageOnSmallScreen}>
                 <DarkModeToggle />
-                <SelectLanguage />
+                <SelectLanguage top={80}/>
             </div>
 
             <div>

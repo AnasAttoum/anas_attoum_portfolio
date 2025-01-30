@@ -5,7 +5,7 @@ import cookies from "js-cookie";
 import styles from "../styles/selectLanguage.module.css";
 import i18next from "i18next";
 
-export default function SelectLanguage({top=80}) {
+export default function SelectLanguage({top=55}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
