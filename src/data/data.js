@@ -83,6 +83,30 @@ export const skillsData = [
 
 export const projectsData = [
   {
+    name: "SkateVibe",
+    type: "page",
+    normalName: "Skate Vibe",
+    backgroundImage: "url(/images/projects/skateVibe/skateVibe.png)",
+    title: "S k a t e &nbsp; V i b e",
+    codeURL: "https://github.com/AnasAttoum/skate-vibe",
+    demoURL: "https://skate-vibe.vercel.app",
+    mockup: "url(/images/projects/skateVibe/skateVibeMockup.png)",
+    logo: "url(/images/projects/skateVibe/skateVibeLogo.png)",
+    text: "skateVibeText",
+    madeWith: [
+      "Next.js",
+      "Three.js",
+      "React Three Drei",
+      "React Three Fiber",
+      "TypeScript",
+      "Tailwindcss",
+      "Gsap",
+      "Clsx",
+    ],
+    video:
+      "https://drive.google.com/file/d/1dfe2G3cBNH98voSPRcOL9Kb2j3V38cWT/preview",
+  },
+  {
     name: "GlassEffect",
     type: "component",
     normalName: "Glass Effect",

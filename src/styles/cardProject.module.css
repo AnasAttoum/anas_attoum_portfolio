@@ -260,4 +260,12 @@
         height: 4vw;
     }
 
+    .cardProjects:hover .title {
+        transform: translateY(10px);
+    }
+
+    .cardProjects:hover .title2 {
+        transform: translateY(-10px);
+    }
+
 }

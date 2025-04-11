@@ -43,5 +43,6 @@
   "ourJourneyBlogText": "This is my Simple Project while training at Darrebni Company.<br/>The idea of the project is a blog website page for a bloger to share his stories.",
   "cupcakesCardsText": "This is a component design that can be used in any project. <br/> it’s a card design, can be useful for categories, infos and products with a cool hover effect. ",
   "findWorkWithMeText": "This was my first project as a React developer that i made at my fourth year (2022) in college.<br/>The idea is to create an interactive website for people and freelancer to help each of them find what they’re looking for.",
-  "glassEffectText": "Glass Effect is a web application that showcases the glassmorphism design trend.<br/> It utilizes Three.js to create dynamic and visually appealing 3D effects, enhancing the depth and modern aesthetics of the user interface."
+  "glassEffectText": "Glass Effect is a web application that showcases the glassmorphism design trend.<br/> It utilizes Three.js to create dynamic and visually appealing 3D effects, enhancing the depth and modern aesthetics of the user interface.",
+  "skateVibeText": "Skate Vibe is a dynamic and immersive 3D skateboard experience built with Three.js. <br/>This project highlights my skills in 3D modeling, scene setup, camera control, and interactive animations in a browser-based experience."
 }
